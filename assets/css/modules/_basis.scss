@@ -5,7 +5,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  
+
 }
 html {
   font-size: 18px;
@@ -13,8 +13,9 @@ html {
 }
 body {
   overflow-x: hidden;
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  font-size: 18px;
+  font-family: 'New Tegomin', serif;
+  // font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  // font-size: 18px;
   line-height: (32/18);
   font-weight: bold;
   text-decoration: none;

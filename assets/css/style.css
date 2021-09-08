@@ -16,10 +16,8 @@ html {
 }
 
 body {
-  font-family: 'New Tegomin', serif;
   overflow-x: hidden;
-  /* font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif; */
-  font-size: 18px;
+  font-family: 'New Tegomin', serif;
   line-height: 1.77778;
   font-weight: bold;
   text-decoration: none;
@@ -334,6 +332,10 @@ button {
   font-family: 'New Tegomin', serif;
 }
 
+.big_text {
+  font-size: 24px;
+}
+
 /*************************
 * Button
 *************************/
@@ -341,7 +343,7 @@ button {
   display: block;
   text-decoration: none;
   cursor: pointer;
-  background-color: #006837;
+  background-color: #00445b;
   color: #fff;
   font-size: 24px;
   line-height: 1.54167;
