@@ -24,7 +24,8 @@ body {
   text-decoration: none;
   border: none;
   list-style: none;
-  color: #000;
+  color: white;
+  background-color: #25003c;
   margin: 0;
 }
 
@@ -147,7 +148,7 @@ button {
 }
 
 .card {
-  background-color: #fff;
+  background-color: red;
   margin-bottom: 20px;
   height: 100%;
 }
@@ -247,7 +248,7 @@ button {
 }
 
 .bg-color--gray {
-  background-color: #e6e6e6;
+  background-color: #750000;
 }
 
 /*********************
@@ -274,7 +275,6 @@ button {
   line-height: 1.75;
   text-align: center;
   padding: 9px 20px;
-  background-color: #d9e021;
   margin: 0 -20px 20px -20px;
 }
 
@@ -292,7 +292,7 @@ button {
 }
 
 .section-title--keycolor {
-  background-color: #39b54a;
+  background-color: #750000;
 }
 
 .section-title--story {
@@ -383,8 +383,8 @@ button {
 }
 
 .header__logo {
-  width: 330px;
-  height: 42px;
+  width: 200px;
+  height: 42.8px;
 }
 
 .header__name {
