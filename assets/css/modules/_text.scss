@@ -19,7 +19,6 @@
   line-height: (42/24);
   text-align: center;
   padding: ((60px-42)/2) 20px;
-  background-color: #d9e021;
   margin: 0 -20px 20px -20px;
   &__stage {
     display: inline-block;
@@ -32,7 +31,7 @@
     }
   }
   &--keycolor {
-    background-color: #39b54a;
+    background-color: #750000;
   }
   &--story {
     width: 330px;
@@ -65,3 +64,7 @@
   font-style: italic;
   font-weight: normal;
 }
+.font-odr{
+  font-family:'New Tegomin', serif;
+}
+
