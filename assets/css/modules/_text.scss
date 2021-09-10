@@ -31,7 +31,7 @@
     }
   }
   &--keycolor {
-    background-color: #750000;
+    background-color: rgb(61, 0, 23);
   }
   &--story {
     width: 330px;
@@ -67,4 +67,9 @@
 .font-odr{
   font-family:'New Tegomin', serif;
 }
-
+.font-hutu{
+  font-family: 'Courier New', Courier, monospace;
+}
+.big_text{
+  font-size: 24px;
+}

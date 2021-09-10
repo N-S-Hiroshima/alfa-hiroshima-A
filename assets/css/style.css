@@ -248,7 +248,7 @@ button {
 }
 
 .bg-color--gray {
-  background-color: #750000;
+  background-color: #3d0017;
 }
 
 /*********************
@@ -292,7 +292,7 @@ button {
 }
 
 .section-title--keycolor {
-  background-color: #750000;
+  background-color: #3d0017;
 }
 
 .section-title--story {
@@ -331,6 +331,15 @@ button {
 
 .font-odr {
   font-family: 'New Tegomin', serif;
+}
+
+
+.font-hutu {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.big_text {
+  font-size: 24px;
 }
 
 /*************************
