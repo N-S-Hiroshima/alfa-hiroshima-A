@@ -18,6 +18,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: 'New Tegomin', serif;
+  font-size: 18px;
   line-height: 1.77778;
   font-weight: bold;
   text-decoration: none;
@@ -26,9 +27,6 @@ body {
   color: white;
   background-color: #25003c;
   margin: 0;
-}
-img.rei-1{
-  width: 700px;
 }
 
 img {
@@ -335,6 +333,7 @@ button {
   font-family: 'New Tegomin', serif;
 }
 
+
 .font-hutu {
   font-family: 'Courier New', Courier, monospace;
 }
@@ -350,7 +349,7 @@ button {
   display: block;
   text-decoration: none;
   cursor: pointer;
-  background-color: #00536f;
+  background-color: #004c6f;
   color: #fff;
   font-size: 24px;
   line-height: 1.54167;
