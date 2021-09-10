@@ -16,10 +16,8 @@ html {
 }
 
 body {
-  font-family: 'New Tegomin', serif;
   overflow-x: hidden;
-  /* font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif; */
-  font-size: 18px;
+  font-family: 'New Tegomin', serif;
   line-height: 1.77778;
   font-weight: bold;
   text-decoration: none;
@@ -152,7 +150,7 @@ button {
 }
 
 .card {
-  background-color: red;
+  background-color: #35003d;
   margin-bottom: 20px;
   height: 100%;
 }
@@ -252,7 +250,7 @@ button {
 }
 
 .bg-color--gray {
-  background-color: #750000;
+  background-color: #3d0017;
 }
 
 /*********************
@@ -296,7 +294,7 @@ button {
 }
 
 .section-title--keycolor {
-  background-color: #750000;
+  background-color: #3d0017;
 }
 
 .section-title--story {
@@ -337,6 +335,14 @@ button {
   font-family: 'New Tegomin', serif;
 }
 
+.font-hutu {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.big_text {
+  font-size: 24px;
+}
+
 /*************************
 * Button
 *************************/
@@ -344,7 +350,7 @@ button {
   display: block;
   text-decoration: none;
   cursor: pointer;
-  background-color: #006837;
+  background-color: #00536f;
   color: #fff;
   font-size: 24px;
   line-height: 1.54167;
