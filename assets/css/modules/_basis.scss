@@ -26,7 +26,11 @@ body {
   margin: 0;
 }
 img {
-  width: 100%;
+  
+  .rei-1{
+    width: calc(height * 0.54);
+      // width:calc(100% - 64.777%)
+  }
 }
 figure {
   margin: 0;
