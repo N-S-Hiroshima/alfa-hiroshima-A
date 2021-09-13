@@ -33,6 +33,17 @@ img {
   width: 100%;
 }
 
+.img-kakeru--index {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 235px;
+  max-height: 600px;
+}
+
+.img-kakeru--index img {
+  width: 100%;
+}
+
 figure {
   margin: 0;
 }
@@ -236,6 +247,14 @@ button {
   margin: 0 auto;
 }
 
+.d_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  display: table;
+}
+
 /*********************
 * Color
 *********************/
@@ -333,13 +352,17 @@ button {
   font-family: 'New Tegomin', serif;
 }
 
-
 .font-hutu {
   font-family: 'Courier New', Courier, monospace;
 }
 
 .big_text {
-  font-size: 24px;
+  font-size: 1.3em;
+}
+
+.text-middle {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /*************************
@@ -403,6 +426,11 @@ button {
 .header__name {
   font-size: 20px;
   line-height: 1.1;
+}
+
+.header--color {
+  color: #25003c;
+  white-space: nowrap;
 }
 
 .footer {
