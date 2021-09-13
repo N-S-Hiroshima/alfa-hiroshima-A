@@ -28,7 +28,12 @@ body {
   margin: 0;
 }
 
+img .title_img {
+  width: 100%;
+}
+
 img .rei-1 {
+  height: 30%;
   width: calc(height * 0.54);
 }
 

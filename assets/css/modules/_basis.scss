@@ -26,8 +26,11 @@ body {
   margin: 0;
 }
 img {
-  
+  .title_img{
+    width: 100%;
+  }
   .rei-1{
+    height: 30%;
     width: calc(height * 0.54);
       // width:calc(100% - 64.777%)
   }
