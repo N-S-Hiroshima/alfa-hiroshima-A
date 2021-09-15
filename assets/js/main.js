@@ -18,29 +18,29 @@ const app = Vue.createApp({
       */
       correctAnswer: {
         stage1: {
-          q1: 'aaa',
+          q1: 'くすりゆび',
         },
         stage2: {
-          q1: 'iii',
+          q1: 'くれよん',
           // q2: 'えええ',
           // q3: 'おおお'
         },
         stage3: {
-          q1: 'aaa',
+          q1: 'いえ',
           // q2: 'かかか',
           // q3: 'ききき',
         },
         stage4:{
-          q1:'aaa'
+          q1:'ふね'
         },
         stage5:{
-          q1:'aaa'
+          q1:'バイオリン'
         },
         stage6:{
-          q1:'aaa'
+          q1:'メッセージ'
         },
         stage7:{
-          q1:'ゆくえふめい'
+          q1:['ゆくえふめい','りんねてんせい']
         }
       },
 
@@ -92,6 +92,7 @@ const app = Vue.createApp({
         stage4: false,
         stage5: false,
         stage6: false,
+        stage7: false
       },
     }
   },
@@ -139,7 +140,7 @@ app.component('answer-input', {
         <input type="text" v-model="inputAnswer" placeholder="ここに答えを入力しよう">
       </div>
       <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
-      <button v-on:click="judgement(inputAnswer)">送信</button>
+      <button v-on:click="judgement(inputAnswer)">答える</button>
       <p v-if="message === okMessage" class="err-message">{{ message }}</p>
     </div>`,
   methods: {
@@ -147,7 +148,7 @@ app.component('answer-input', {
       if(answer === this.correct) { // 入力値が解答と一致する場合
         this.message = this.okMessage;
         this.$emit('answerInput', true);
-      } else { // 一致しない場合
+      }else { // 一致しない場合
         this.message = this.ngMessage; 
         this.$emit('answerInput', false);
       }
