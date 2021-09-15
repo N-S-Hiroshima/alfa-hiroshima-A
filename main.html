@@ -279,7 +279,127 @@ Youtube貼り付けここまで -->
         <!-- STAGE4クリア画面　ここまで -->
       </div>
       <!-- STAGE4　ここまで -->
+      <!--stage5 ここから-->
+      <div v-if="next['stage4']" id="sectionStage5" class="stage">
+        <section>
+          <div class="section">
+            <div class="container">
+              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：5</span>トイレの花子さん編</h2>
+              <p class="text-center">家庭科室に入ることができた！<br>
+                すぐに目に入ったのは黒板にある４つの謎。<br>
+                これらを解くことで、きっと次のステップに繋がるはずだ！</p>
+                <figure class="image__container">
+                  <img src="https://www.pcci-school.com/_img/school/detail/photo/school16_640_5.jpg" alt="">
+                </figure>
+            </div>
+          </div>
+          <div class="stage-column__container section bg-color--keycolor">
+            <div class="container">
+              <h2 class="section-title"><span class="section-title__stage">STAGE：5</span>キーワードを入力</h2>
+              <div class="row">
+                <div class="column">
+                  <answer-input v-bind:correct="correctAnswer['stage5']['q1']" v-on:answer-input="answerInput($event, 'stage5', 1)"></answer-input>
+                  <a class="link-hint" href="hint5.html" target="hint5">ヒントをみる</a>
+                </div><!-- /.column -->
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <!-- STAGE5クリア画面　ここから -->
+        <section v-if="clear['stage5']" v-bind:class="{isClear:clear['stage5']}"  class="section section--clear bg-color--gray">
+          <div class="container">
+            <div class="clear-message">
+              <div class="clear-message__title">STAGE：5　クリア！</div>
+              <div class="clear-message__content">黒板の指示に従い、<br>
+                次のステージの謎を解こう！</div>
+                <button v-on:click="nextStage('stage5')" onclick="location.href='#sectionStage6'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+            </div>
+          </div>
+        </section>
+        <!-- STAGE5クリア画面　ここまで -->
+      </div>
+      <!--stage5クリア画面 ここまで-->
+      <!--stage6 ここから-->
+      <div v-if="next['stage5']" id="sectionStage6" class="stage">
+        <section>
+          <div class="section">
+            <div class="container">
+              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：6</span>トイレの花子さん編</h2>
+              <p class="text-center">家庭科室に入ることができた！<br>
+                すぐに目に入ったのは黒板にある４つの謎。<br>
+                これらを解くことで、きっと次のステップに繋がるはずだ！</p>
+                <figure class="image__container">
+                  <img src="https://www.pcci-school.com/_img/school/detail/photo/school16_640_5.jpg" alt="">
+                </figure>
+            </div>
+          </div>
+          <div class="stage-column__container section bg-color--keycolor">
+            <div class="container">
+              <h2 class="section-title"><span class="section-title__stage">STAGE：6</span>キーワードを入力</h2>
+              <div class="row">
+                <div class="column">
+                  <answer-input v-bind:correct="correctAnswer['stage6']['q1']" v-on:answer-input="answerInput($event, 'stage6', 1)"></answer-input>
+                  <a class="link-hint" href="hint6.html" target="hint5">ヒントをみる</a>
+                </div><!-- /.column -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STAGE6クリア画面　ここから -->
+        <section v-if="clear['stage6']" v-bind:class="{isClear:clear['stage6']}"  class="section section--clear bg-color--gray">
+          <div class="container">
+            <div class="clear-message">
+              <div class="clear-message__title">STAGE：6　クリア！</div>
+              <div class="clear-message__content">黒板の指示に従い、<br>
+                次のステージの謎を解こう！</div>
+                <button v-on:click="nextStage('stage6')" onclick="location.href='#sectionStage7'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+            </div>
+          </div>
+        </section>
+        <!-- STAGE5クリア画面　ここまで -->
+      </div>
+      <!--stage6クリア画面 ここまで-->
+          <!--stage7 ここから-->
+            <div v-if="next['stage6']" id="sectionStage7" class="stage">
+              <section>
+                <div class="section">
+                  <div class="container">
+                    <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：7</span>トイレの花子さん編</h2>
+                    <p class="text-center">家庭科室に入ることができた！<br>
+                      すぐに目に入ったのは黒板にある４つの謎。<br>
+                      これらを解くことで、きっと次のステップに繋がるはずだ！</p>
+                      <figure class="image__container">
+                        <img src="https://www.pcci-school.com/_img/school/detail/photo/school16_640_5.jpg" alt="">
+                      </figure>
+                  </div>
+                </div>
+                <div class="stage-column__container section bg-color--keycolor">
+                  <div class="container">
+                    <h2 class="section-title"><span class="section-title__stage">STAGE：7</span>キーワードを入力</h2>
+                    <div class="row">
+                      <div class="column">
+                        <answer-input v-bind:correct="correctAnswer['stage7']['q1']" v-on:answer-input="answerInput($event, 'stage7', 1)"></answer-input>
+                      </div><!-- /.column -->
+                    </div>
+                  </div>
+                </div>
+              </section>
+      
+              <!-- STAGE7クリア画面　ここから -->
+              <section v-if="clear['stage7']" v-bind:class="{isClear:clear['stage7']}"  class="section section--clear bg-color--gray">
+                <div class="container">
+                  <div class="clear-message">
+                    <div class="clear-message__title">STAGE：7　クリア！</div>
+                    <div class="clear-message__content">黒板の指示に従い、<br>
+                      次のステージの謎を解こう！</div>
+                      <button v-on:click="nextStage('stage7')" onclick="location.href='#sectionStage_normal'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+                  </div>
+                </div>
+              </section>
+              <!-- STAGE7クリア画面　ここまで -->
+            </div>
     </div>
   </main>
   <footer class="footer section bg-color--gray">
