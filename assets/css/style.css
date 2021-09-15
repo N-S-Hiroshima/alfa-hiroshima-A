@@ -263,11 +263,15 @@ button {
 }
 
 .bg-color--subcolor {
-  background-color: #d9e021;
+  background-color: #3d0017;
 }
 
 .bg-color--gray {
   background-color: #3d0017;
+}
+
+.bg-color--clear {
+  background-color: #26003d;
 }
 
 /*********************
@@ -326,18 +330,18 @@ button {
   line-height: 1.06667;
   margin: 0;
   padding-bottom: 15px;
-  color: #006837;
+  color: white;
 }
 
 .section-title--border::after {
   position: absolute;
   bottom: 0;
-  left: calc(50% - 95px);
+  left: calc(50% - 169px);
   display: block;
   content: '';
-  background-color: #fff;
+  background-color: #fcee21;
   height: 2.6px;
-  width: 190px;
+  width: 325px;
 }
 
 /******************
@@ -363,6 +367,12 @@ button {
 .text-middle {
   display: table-cell;
   vertical-align: middle;
+}
+
+.text_bokashi {
+  color: transparent;
+  text-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
+  display: inline-block;
 }
 
 /*************************
@@ -490,11 +500,19 @@ button {
 .link-hint {
   text-align: center;
   display: block;
+  color: #ffffff;
   margin-top: 20px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.link-hint:hover {
+  color: #fcee21;
 }
 
 .clear-message {
-  background-color: #000021;
+  background-color: #3d0036;
   padding: 30px 30px 60px;
   position: relative;
 }
@@ -503,7 +521,7 @@ button {
   position: relative;
   display: block;
   text-align: center;
-  color: #006837;
+  color: #ffffff;
   font-size: 30px;
   padding-bottom: 10px;
   margin-bottom: 35px;
@@ -515,7 +533,7 @@ button {
   display: block;
   width: 183px;
   height: 2px;
-  background-color: #fff;
+  background-color: #fcee21;
   bottom: 0;
   left: calc(50% - (183px/2));
 }
