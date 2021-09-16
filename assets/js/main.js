@@ -178,8 +178,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 function bgm(){
   var music = new Audio();
-  /Users/kumagoro/Documents/GitHub/beta-hiroshima-A/assets/audio/BGM.mp3
-  music.src = '../audio/BGM.mp3';
+  music.src = 'https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/BGM.mp3';
   music.play();
   music.addEventListener("ended", function () {
       music.currentTime = 0;
