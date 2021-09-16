@@ -175,3 +175,13 @@ window.addEventListener('DOMContentLoaded', function(){
     audioElement.autoplay = true;
   });
 });
+
+function bgm(){
+  var music = new Audio();
+  music.src = '../assets/audio/BGM.mp3';
+  music.play();
+  music.addEventListener("ended", function () {
+      music.currentTime = 0;
+      music.play();
+  }, false);
+};
