@@ -8,6 +8,7 @@
  *          number：問題番号（数字） 1
  *          final ：最終ステージの場合 'final'
  *********************************************************************************************************/
+let finals="off";
  const app = Vue.createApp({
   data() {
     /* 初期値を設定します */
@@ -18,25 +19,25 @@
       */
       correctAnswer: {
         stage1: {
-          q1: 'くすりゆび',
+          q1: ''//くすりゆび
         },
         stage2: {
-          q1: 'クレヨン'
+          q1: ''//クレヨン
         },
         stage3: {
-          q1: 'いえ'
+          q1: ''//いえ
         },
         stage4:{
-          q1:'ふね'
+          q1:''//ふね
         },
         stage5:{
-          q1:'バイオリン'
+          q1:''//バイオリン
         },
         stage6:{
-          q1:'メッセージ'
+          q1:''//メッセージ
         },
         stage7:{
-          q1:['ゆくえふめい','りんねてんせい']
+          q1:'ゆくえふめい'//りんねてんせい
         }
       },
 
@@ -104,7 +105,8 @@
       this.clear[stage] = result;
       /* 最終ステージの入力を判定します。 */
       if ( this.clear[stage] === true && final === 'final' ) {
-        window.location.href = 'final.html';
+        finals = "on";
+        
       }
     },
     /* クリア画面「次のステージへ」ボタンをクリックした時の動作を設定します
@@ -126,6 +128,7 @@ app.component('answer-input', {
       /* 送信ボタン上下に表示されるメッセージ */
       okMessage: '合っていたようだ…',
       ngMessage: 'どうやら違うらしい、もう一度考えてみよう。',
+      loopMessage: 'ru-pumesse-zi',//ゆくえふめい入力時に送信ボタン上に表示させる文章
       message: '',
       inputAnswer: '',
     }
@@ -136,12 +139,21 @@ app.component('answer-input', {
         <input type="text" v-model="inputAnswer" placeholder="ここに答えを入力しよう">
       </div>
       <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
+      <p v-if="message === loopMessage" class="err-message">{{ message }}</p>
       <button v-on:click="judgement(inputAnswer)">答える</button>
       <p v-if="message === okMessage" class="err-message">{{ message }}</p>
     </div>`,
   methods: {
     judgement(answer) {
-      if(answer === this.correct) { // 入力値が解答と一致する場合
+      console.log(finals)
+      if(answer=== "ゆくえふめい"){//ゆくえふめいと入力した時の処理
+        this.message = this.loopMessage;
+        this.$emit('answerInput', true);
+
+      }else if(answer==="りんねてんせい"){//りんねてんせいと入力した時の処理
+        window.location.href = 'final.html';
+        
+      }else if(answer === this.correct) { // 入力値が解答と一致する場合
         this.message = this.okMessage;
         this.$emit('answerInput', true);
       }else { // 一致しない場合
