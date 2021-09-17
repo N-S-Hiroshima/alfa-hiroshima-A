@@ -19,25 +19,25 @@ let finals="off";
       */
       correctAnswer: {
         stage1: {
-          q1: ''//くすりゆび
+          q1: 'くすりゆび'//くすりゆび
         },
         stage2: {
-          q1: ''//クレヨン
+          q1: 'クレヨン'//クレヨン
         },
         stage3: {
-          q1: ''//いえ
+          q1: 'いえ'//いえ
         },
         stage4:{
-          q1:''//ふね
+          q1:'ふね'//ふね
         },
         stage5:{
-          q1:''//バイオリン
+          q1:'バイオリン'//バイオリン
         },
         stage6:{
-          q1:''//メッセージ
+          q1:'メッセージ'//メッセージ
         },
         stage7:{
-          q1:'ゆくえふめい'//りんねてんせい
+          q1:'ゆくえふめい'//
         }
       },
 
@@ -128,7 +128,7 @@ app.component('answer-input', {
       /* 送信ボタン上下に表示されるメッセージ */
       okMessage: '合っていたようだ…',
       ngMessage: 'どうやら違うらしい、もう一度考えてみよう。',
-      loopMessage: 'ru-pumesse-zi',//ゆくえふめい入力時に送信ボタン上に表示させる文章
+      loopMessage: '謎を解き終えたが、先程の回答ではどうやら不十分だったらしい。するとカケルが語りかけてきた。「違ったみたいだね......てを貸すから。次こそ一緒にここから抜け出そう」',//ゆくえふめい入力時に送信ボタン上に表示させる文章
       message: '',
       inputAnswer: '',
     }
@@ -185,3 +185,10 @@ function bgm(){
       music.play();
   }, false);
 };
+
+//BGM停止スクリプト
+// function stbgm(){
+//   music.pause();
+//   music.currentTime = 0;
+//   console.log(paused);
+// };
