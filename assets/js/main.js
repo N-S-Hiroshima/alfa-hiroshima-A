@@ -8,7 +8,7 @@
  *          number：問題番号（数字） 1
  *          final ：最終ステージの場合 'final'
  *********************************************************************************************************/
-let finals="off";
+let finals="off",music;
  const app = Vue.createApp({
   data() {
     /* 初期値を設定します */
@@ -19,22 +19,22 @@ let finals="off";
       */
       correctAnswer: {
         stage1: {
-          q1: 'くすりゆび'//くすりゆび
+          q1: ''//'くすりゆび'
         },
         stage2: {
-          q1: 'クレヨン'//クレヨン
+          q1: ''//'クレヨン'
         },
         stage3: {
-          q1: 'いえ'//いえ
+          q1: ''//'いえ'
         },
         stage4:{
-          q1:'ふね'//ふね
+          q1:''//'ふね'
         },
         stage5:{
-          q1:'バイオリン'//バイオリン
+          q1:''//'バイオリン'
         },
         stage6:{
-          q1:'メッセージ'//メッセージ
+          q1:'メッセージ'
         },
         stage7:{
           q1:'ゆくえふめい'//
@@ -116,6 +116,11 @@ let finals="off";
     nextStage(stage) {
       this.clear[stage] = false;
       this.next[stage] = true;
+      if(stage=="stage4"){
+        bgm("start",0);
+      }else if(stage=="stage5"){
+        bgm("stop");
+      }
     },
   }
 })
@@ -176,19 +181,19 @@ window.addEventListener('DOMContentLoaded', function(){
   });
 });
 
-function bgm(){
-  var music = new Audio();
-  music.src = 'https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/BGM.mp3';
-  music.play();
-  music.addEventListener("ended", function () {
-      music.currentTime = 0;
-      music.play();
-  }, false);
-};
+function bgm(playmode,track){
+  switch(track){
+    case 0:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/BGM.mp3");
+      break;
+    default:
+      break;
 
-//BGM停止スクリプト
-// function stbgm(){
-//   music.pause();
-//   music.currentTime = 0;
-//   console.log(paused);
-// };
+  }
+  if(playmode=="start"){
+    music.loop = true;
+    music.play();
+  }else{
+    music.pause();
+  }  
+};
