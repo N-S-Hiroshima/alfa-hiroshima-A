@@ -21,19 +21,19 @@ let finals="off",music,BGM;
       */
       correctAnswer: {
         stage1: {
-          q1: ''//'くすりゆび'
+          q1: 'くすりゆび'
         },
         stage2: {
-          q1: ''//'クレヨン'
+          q1: 'クレヨン'
         },
         stage3: {
-          q1: ''//'いえ'
+          q1: 'いえ'
         },
         stage4:{
-          q1:''//'ふね'
+          q1:'ふね'
         },
         stage5:{
-          q1:''//'バイオリン'
+          q1:'バイオリン'
         },
         stage6:{
           q1:'メッセージ'
