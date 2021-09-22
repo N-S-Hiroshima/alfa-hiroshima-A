@@ -271,11 +271,6 @@ function sleep(waitMsec) {//sleep(ミリ秒)で遅延を作れる
   while (new Date() - startMsec < waitMsec);
 }
 
-function disp(url){
-
-	window.open(url, "window_name", "width=720,height=480,scrollbars=yes");
-
-}
 // スクロールを禁止する関数
 function noScroll(event) {
     event.preventDefault();
