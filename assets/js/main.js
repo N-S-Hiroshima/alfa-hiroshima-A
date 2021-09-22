@@ -270,3 +270,29 @@ function sleep(waitMsec) {//sleep(ミリ秒)で遅延を作れる
   // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
   while (new Date() - startMsec < waitMsec);
 }
+
+// スクロールを禁止する関数
+function noScroll(event) {
+    event.preventDefault();
+  }
+
+ function scrollstop(){
+ // スクロール禁止(SP)
+ document.addEventListener('touchmove', noScroll, { passive: false });
+ // スクロール禁止(PC)
+ document.addEventListener('mousewheel', noScroll, { passive: false });
+ }
+
+ function scrollstart(){
+ // スクロール禁止を解除(SP)
+ document.removeEventListener('touchmove', noScroll, { passive: false });
+ // スクロール禁止を解除(PC)
+ document.removeEventListener('mousewheel', noScroll, { passive: false });
+ }
+
+ function title(){
+  var animated = 'animated';
+  $('.fadeIns').addClass(animated);
+  $('.fadeInn').addClass(animated);
+  scrollstart(); 
+ }
