@@ -22,4 +22,8 @@
 .header--color{
   color:rgb(37, 0, 60);
   white-space: nowrap;
+  &--final{
+    color: rgb(36, 199, 199);
+
+  }
 }
