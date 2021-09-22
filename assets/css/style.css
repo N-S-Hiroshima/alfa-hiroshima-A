@@ -113,6 +113,20 @@ button {
   height: 55px;
 }
 
+.finalbody {
+  overflow-x: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  line-height: 1.77778;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  color: #25c7c7;
+  background-color: white;
+  margin: 0;
+}
+
 /*******************
 * Layout
 *******************/
@@ -291,6 +305,14 @@ button {
   background-color: #26003d;
 }
 
+.bg-color--final {
+  background-color: #25c7c7;
+}
+
+.bg-color--final2 {
+  background-color: #2575c7;
+}
+
 /*********************
 * title
 **********************/
@@ -396,9 +418,12 @@ button {
   display: inline-block;
 }
 
+.final_text {
+  color: #fff;
+  }
 .test {
   padding: 0px;
-}
+  }
 
 /*************************
 * Button
@@ -466,6 +491,10 @@ button {
 .header--color {
   color: #25003c;
   white-space: nowrap;
+}
+
+.header--color--final {
+  color: #24c7c7;
 }
 
 .footer {
