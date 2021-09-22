@@ -133,6 +133,8 @@ let finals="off",music,BGM;
         bgm("bgm");
       }else if(stage=="stage6"){
         bgm("bgm");
+      }else if(stage=="stage7"){
+        bgm("bgm");
       }
     },
   }
