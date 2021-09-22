@@ -270,3 +270,8 @@ function sleep(waitMsec) {//sleep(ミリ秒)で遅延を作れる
   // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
   while (new Date() - startMsec < waitMsec);
 }
+function disp(url){
+
+	window.open(url, "window_name", "width=720,height=480,scrollbars=yes");
+
+}
