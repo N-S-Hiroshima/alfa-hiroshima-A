@@ -11,6 +11,7 @@
 let finals="off",music;
  const app = Vue.createApp({
   data() {
+    bgm("loop",2);
     /* 初期値を設定します */
     return {
       /* 解答
@@ -118,8 +119,6 @@ let finals="off",music;
       this.next[stage] = true;
       if(stage="stage1"){
         bgm("stop");
-        bgm("loop",2);
-
       }else if(stage=="stage4"){
         bgm("stop");
         bgm("start",0);
@@ -176,40 +175,43 @@ app.component('answer-input', {
 
 app.mount('#stage')
 
-window.addEventListener('DOMContentLoaded', function(){
-
-  const audioElement = document.querySelector("audio");
-
-  audioElement.addEventListener('loadeddata', (e)=> {
-    audioElement.muted = true;
-    audioElement.autoplay = true;
-  });
-});
 
 function bgm(playmode,track){
   switch(track){
     case 0:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/0.mp3");
+      music.volume = .2      
       break;
     case 1:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/1.mp3");
+      music.volume = .2
       break;
     case 2:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/2.mp3");
+      music.volume = .9
       break;
     default:
       break;
 
   }
   if(playmode=="start"){
-    music.volume = .2
     music.loop = false;
     music.play();
   }else if(playmode=="loop"){
-    music.volume = .2
     music.loop = true;
     music.play();
   }else{
+    while (music.volume>0.1) {
+      sleep(100);
+      music.volume = music.volume - .1
+    }
     music.pause();
   }  
 };
+
+function sleep(waitMsec) {//sleep(ミリ秒)で遅延を作れる
+  var startMsec = new Date();
+ 
+  // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
+  while (new Date() - startMsec < waitMsec);
+}
