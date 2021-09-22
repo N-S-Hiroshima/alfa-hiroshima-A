@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<ruby><rt></rt></ruby>
+
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,7 @@
   <title>七不思議からの脱出 │ Project N</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/fadein.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -19,7 +20,12 @@
   <script>
      var data = sessionStorage.getItem('session');
       if (data) {  //また会ったね と表示される
+        setTimeout(function(){
+              title();
+            }, 900); 
+        bgm("start",1)
       } else {
+    scrollstop();
     sessionStorage.setItem('session', '初回');
     var options = {
       icon: 'warning',
@@ -34,8 +40,12 @@
       };
       swal(options).then(function(value){
           if(value == 3){
-            bgm("start",1);
+            bgm("start",1); 
+            setTimeout(function(){
+              title();
+            }, 9000);      
               //日本語
+
       }
                     
     });
@@ -53,6 +63,7 @@
       }
     });
     });
+
   </script>
 
   <svg width="0" height="0" class="hidden">
@@ -61,19 +72,28 @@
       <polygon points="0 24.94 0 19.66 7.35 12.47 0 5.92 0 0 12.47 12.47 0 24.94"/>
     </symbol>
   </svg>
-  <header class="header">
+  <header class="header fadeIns">
     <div class="container">
       <div class="header__logo"><img src="assets/images/teamlogo2.png" alt="チームロゴ"></div>
       <div class="header__name header--color header--color">N・S高生制作サイト</div>
     </div>
   </header>
   <main class="main index-page">
+    <ruby><rt></rt></ruby>
     <!-- タイトルエリア　ここから -->
     <h1 class="main-title"><img class="fadeIn" src="assets/images/2Q_projectN_Top.png" alt="Presented by SCRAP×N・S高リアル脱出ゲーム制作PJ 七不思議からの脱出"></h1>
+    <img class="fadeInn" src="./assets/images/2Q_projectN_titlevisual.png">
+    <div class="fadeInn">
+      <ul>
+      <li><span><img src="assets/images/カケルくん_ライト_驚き.png" alt=""></span></li>
+      <li><span><img src="assets/images/ユウスケくん_通常.png" alt=""></span></li>
+      <li><span><img src="assets/images/main-image.png" alt=""></span></li>
+    </ul></div>
+    <span class="loading fadeInn"><span>読</span><span>み</span><span>込</span><span>み</span><span>中</span><span>.</span><span>.</span><span>.</span></span>
     <!-- タイトルエリア　ここまで -->
     <section class="section section--story">
       <div class="container">
-        <h2 class="section-title section-title--keycolor section-title--story ">あらすじ</h2>
+        <h2 class="section-title section-title--keycolor section-title--story fadeIns">あらすじ</h2>
         <div class="story">
           <p class="text-center fadeIn">誰かに呼ばれた気がして目を覚ますと、学校の玄関にいた。外はまだ暗い。<br>
             隣にいた友人のカケルに話を聞く。<br>
