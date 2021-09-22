@@ -199,6 +199,26 @@ function bgm(playmode,track){
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/4.mp3");
       music.volume = .3
       break;
+    case 5:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/5.mp3");
+      music.volume = .3
+      break;
+    case 6:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/6.mp3");
+      music.volume = .3
+      break;
+    case 7:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/7.mp3");
+      music.volume = .3
+      break;
+    case 8:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/8.mp3");
+      music.volume = .3
+      break;
+    case 9:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/9.mp3");
+      music.volume = .3
+      break;
     default:
       break;
   }
