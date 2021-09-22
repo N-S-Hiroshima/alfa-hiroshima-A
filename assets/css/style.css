@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 @charset "UTF-8";
 /****************************
  * 共通CSSのテンプレートです。
@@ -96,6 +97,142 @@ button {
   height: 55px;
 }
 
+=======
+@charset "UTF-8";
+/****************************
+ * 共通CSSのテンプレートです。
+*****************************/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.swal-title{
+  font-family: '游ゴシック';
+}
+.swal-text{
+  font-family: '游ゴシック';
+}
+.swal-button{
+  font-family: '游ゴシック';
+}
+.swal-footer {
+  text-align: center;
+}
+
+html {
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'New Tegomin', serif;
+  font-size: 18px;
+  line-height: 1.77778;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  color: white;
+  background-color: #25003c;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.img-kakeru--index {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 235px;
+  max-height: 600px;
+  margin-left: 5vw;
+  margin-right: -20px;
+}
+
+.img-kakeru--hint {
+  max-width: 235px;
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 5px;
+}
+
+.img-kakeru img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  figcaption {
+    font-size: 13px;
+  }
+}
+
+input[type=text] {
+  font-size: 18px;
+  border: none;
+  padding: 25px 35px;
+  display: block;
+  margin: 0 auto;
+  max-width: 580px;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+:-ms-input-placeholder {
+  color: #999;
+}
+
+::-ms-input-placeholder {
+  color: #999;
+}
+
+::placeholder {
+  color: #999;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  border: none;
+  margin: 0 auto;
+  background-color: #004c6f;
+  color: #fff;
+  width: 287px;
+  height: 55px;
+}
+
+.finalbody {
+  overflow-x: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  line-height: 1.77778;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  color: #25c7c7;
+  background-color: white;
+  margin: 0;
+}
+
+>>>>>>> Stashed changes
 /*******************
 * Layout
 *******************/
@@ -346,6 +483,7 @@ button {
 
 /******************
 * text
+<<<<<<< Updated upstream
 ******************/
 .font-eng {
   font-style: italic;
@@ -407,6 +545,81 @@ button {
   height: 24px;
 }
 
+=======
+******************/
+.font-eng {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.font-odr {
+  font-family: 'New Tegomin', serif;
+}
+
+.font-hutu {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.big_text {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+.text-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.text_bokashi {
+  color: transparent;
+  text-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
+  display: inline-block;
+}
+
+.final_text {
+  color: #fff;
+  }
+.test {
+  padding: 0px;
+  }
+
+/*************************
+* Button
+*************************/
+.btn {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #004c6f;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.54167;
+  text-align: center;
+  padding: 11.5px;
+  width: calc(100% - 40px);
+  max-width: 700px;
+  margin: 10px auto;
+  position: relative;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn__arrow {
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 15px;
+  fill: #fff;
+  width: 12px;
+  height: 24px;
+}
+
+>>>>>>> Stashed changes
 /****************
 * header
 *****************/
