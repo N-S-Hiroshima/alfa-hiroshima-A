@@ -116,7 +116,12 @@ let finals="off",music;
     nextStage(stage) {
       this.clear[stage] = false;
       this.next[stage] = true;
-      if(stage=="stage4"){
+      if(stage="stage1"){
+        bgm("stop");
+        bgm("loop",2);
+
+      }else if(stage=="stage4"){
+        bgm("stop");
         bgm("start",0);
       }else if(stage=="stage5"){
         bgm("stop");
@@ -188,11 +193,20 @@ function bgm(playmode,track){
       break;
     case 1:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/1.mp3");
+      break;
+    case 2:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/2.mp3");
+      break;
     default:
       break;
 
   }
   if(playmode=="start"){
+    music.volume = .2
+    music.loop = false;
+    music.play();
+  }else if(playmode=="loop"){
+    music.volume = .2
     music.loop = true;
     music.play();
   }else{
