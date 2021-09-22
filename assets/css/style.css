@@ -50,6 +50,8 @@ img {
      object-fit: cover;
   max-width: 235px;
   max-height: 600px;
+  margin-left: 5vw;
+  margin-right: -20px;
 }
 
 .img-kakeru--hint {
@@ -308,14 +310,6 @@ button {
   background-color: #26003d;
 }
 
-.bg-color--final {
-  background-color: #25c7c7;
-}
-
-.bg-color--final2 {
-  background-color: #2575c7;
-}
-
 /*********************
 * title
 **********************/
@@ -403,7 +397,8 @@ button {
 }
 
 .big_text {
-  font-size: 1.3em;
+  font-size: 1.5em;
+  font-weight: lighter;
 }
 
 .text-middle {
@@ -494,10 +489,6 @@ button {
 .header--color {
   color: #25003c;
   white-space: nowrap;
-}
-
-.header--color--final {
-  color: #24c7c7;
 }
 
 .footer {
@@ -626,13 +617,3 @@ button {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
-
-
-.fadeIn {
-  transition: 1s;
-  opacity: 0;
-}
-
-.fadeIn.animated {
-  opacity: 1;
-}
