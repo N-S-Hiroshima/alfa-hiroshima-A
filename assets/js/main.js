@@ -117,8 +117,8 @@ let finals="off",music;
     nextStage(stage) {
       this.clear[stage] = false;
       this.next[stage] = true;
-    if(stage="stage1"){
-      bgm("loop",4)
+    if(stage=="stage1"){
+      bgm("loop",4);
     }else if(stage=="stage4"){
         bgm("start",0);
       }else if(stage=="stage5"){
