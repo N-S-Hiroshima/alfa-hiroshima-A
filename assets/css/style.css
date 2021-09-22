@@ -50,6 +50,8 @@ img {
      object-fit: cover;
   max-width: 235px;
   max-height: 600px;
+  margin-left: 7vw;
+  margin-bottom: -38px;
 }
 
 .img-kakeru--hint {
@@ -403,7 +405,9 @@ button {
 }
 
 .big_text {
-  font-size: 1.3em;
+  font-size: 1.5em;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 .text-middle {
