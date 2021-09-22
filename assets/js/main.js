@@ -117,7 +117,9 @@ let finals="off",music;
     nextStage(stage) {
       this.clear[stage] = false;
       this.next[stage] = true;
-      if(stage=="stage4"){
+    if(stage="stage1"){
+      bgm("loop",4)
+    }else if(stage=="stage4"){
         bgm("start",0);
       }else if(stage=="stage5"){
 
@@ -163,6 +165,7 @@ app.component('answer-input', {
         this.message = this.okMessage;
         this.$emit('answerInput', true);
         bgm("stop");
+        bgm("start",3)
       }else { // 一致しない場合
         this.message = this.ngMessage; 
         this.$emit('answerInput', false);
@@ -177,7 +180,7 @@ app.mount('#stage')
 function bgm(playmode,track){
   switch(track){
     case 0:
-      music = new Audio("../../assets/audio/0.mp3");
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/0.mp3");
       music.volume = .2      
       break;
     case 1:
@@ -187,6 +190,14 @@ function bgm(playmode,track){
     case 2:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/2.mp3");
       music.volume = .9
+      break;
+    case 3:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/3.mp3");
+      music.volume = .3
+      break
+    case 4:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/4.mp3");
+      music.volume = .3
       break;
     default:
       break;
@@ -200,8 +211,7 @@ function bgm(playmode,track){
     music.play();
   }else{
     while (music.volume>0.1) {
-      sleep(100);
-      music.volume = music.volume - .1
+      music.volume = music.volume - .00001
     }
     music.pause();
   }  
