@@ -40,7 +40,15 @@ img {
   max-height: 600px;
 }
 
-.img-kakeru--index img {
+.img-kakeru--hint {
+  max-width: 235px;
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 5px;
+}
+
+.img-kakeru img {
   width: 100%;
 }
 
@@ -369,10 +377,18 @@ button {
   vertical-align: middle;
 }
 
+.table-cell {
+  display: table-cell;
+}
+
 .text_bokashi {
   color: transparent;
   text-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
   display: inline-block;
+}
+
+.test {
+  padding: 0px;
 }
 
 /*************************

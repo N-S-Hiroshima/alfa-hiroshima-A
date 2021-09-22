@@ -77,8 +77,15 @@
   display: table-cell;
   vertical-align:middle;
 }
+.table-cell{
+  display: table-cell;
+}
+
 .text_bokashi{
   color: transparent;
   text-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
   display: inline-block;
+}
+.test{
+  padding: 0px;
 }

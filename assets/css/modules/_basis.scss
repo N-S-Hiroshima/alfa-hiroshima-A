@@ -33,11 +33,18 @@ img {
       object-fit: cover;
       max-width: 235px;
       max-height: 600px;
+  }
+  &--hint{
+    max-width: 235px;
+    max-height: 600px;
+    object-fit: cover;
+    margin-right: 5px;
+  }
     img{
       width: 100%;
     }
-  }
 }
+
 figure {
   margin: 0;
 }
