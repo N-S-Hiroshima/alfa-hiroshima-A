@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<ruby><rt></rt></ruby>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -9,10 +10,51 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="assets/js/main.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-  <iframe src="assets/audio/BGM.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+  <script>
+     var data = sessionStorage.getItem('session');
+      if (data) {  //また会ったね と表示される
+      } else {
+    sessionStorage.setItem('session', '初回');
+    var options = {
+      icon: 'warning',
+      title:'注意',
+      text:'このサイトは音が鳴ります',
+      buttons: {
+            Ja: {
+                text:'とじる',
+                value: 3,
+              }
+        }
+      };
+      swal(options).then(function(value){
+          if(value == 3){
+            bgm("start",1);
+              //日本語
+      }
+                    
+    });
+  };
+  $(window).on('load scroll', function (){
+    var box = $('.fadeIn');
+    var animated = 'animated';
+    box.each(function(){
+      var boxOffset = $(this).offset().top;
+      var scrollPos = $(window).scrollTop();
+      var wh = $(window).height();
+      //画面内のどの位置で処理を実行するかで「100」の値を変更
+      if(scrollPos > boxOffset - wh + 300 ){
+        $(this).addClass(animated);
+      }
+    });
+    });
+  </script>
+
   <svg width="0" height="0" class="hidden">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.47 24.94" id="arrow" class="arrow_svg">
       <title>arrow</title>
@@ -21,19 +63,19 @@
   </svg>
   <header class="header">
     <div class="container">
-      <div class="header__logo"><img src="assets/images/logo.svg" alt="チームロゴ"></div>
+      <div class="header__logo"><img src="assets/images/teamlogo2.png" alt="チームロゴ"></div>
       <div class="header__name header--color header--color">N・S高生制作サイト</div>
     </div>
   </header>
   <main class="main index-page">
     <!-- タイトルエリア　ここから -->
-    <h1 class="main-title"><img src="assets/images/2Q_projectN_Top.png" alt="Presented by SCRAP×N・S高リアル脱出ゲーム制作PJ 七不思議からの脱出"></h1>
+    <h1 class="main-title"><img class="fadeIn" src="assets/images/2Q_projectN_Top.png" alt="Presented by SCRAP×N・S高リアル脱出ゲーム制作PJ 七不思議からの脱出"></h1>
     <!-- タイトルエリア　ここまで -->
     <section class="section section--story">
       <div class="container">
         <h2 class="section-title section-title--keycolor section-title--story ">あらすじ</h2>
         <div class="story">
-          <p class="text-center">誰かに呼ばれた気がして目を覚ますと、学校の玄関にいた。外はまだ暗い。<br>
+          <p class="text-center fadeIn">誰かに呼ばれた気がして目を覚ますと、学校の玄関にいた。外はまだ暗い。<br>
             隣にいた友人のカケルに話を聞く。<br>
             カケルが言うには、僕は学校の七不思議に囚われており、謎を全て解き明かさなければ永遠に夜の学校から抜け出せないらしい。<br>カケルの言うことが嘘だとは思えないが念の為玄関の扉を開けようとしてみる。やはり開かなかった。<br>
             夜の学校は静かで、僕らの話し声と僕の足音以外は聞こえない。
@@ -42,24 +84,20 @@
             </p>
             
             <div class="story__note__outer bg-color--gray">
-              <ul class="story__note">
+              <ul class="story__note fadeIn">
                 <li>謎を解いていくことでこの学校から脱出できる</li>
                 <li>謎が解けるまでは永遠に囚われたまま</li>
                 <li>謎解きに困ったときは、カケルの考えを聞いてみよう</li>
                 <li>わからない言葉があったら調べながら進めよう</li>
               </ul>
             </div>
-            <p class="text-center">七不思議とは言ってもこの学校でそんな噂を聞いたことはない。<br>
+            <p class="text-center fadeIn">七不思議とは言ってもこの学校でそんな噂を聞いたことはない。<br>
               しばらく悩んでいると、見かねたのかカケルが口を開く。</p>
             <div class="d_flex">
               <div class="img-kakeru--index">
                 <img src="assets/images/kakeru_tujo.png" alt="カケルの立ち絵">
               </div>
-<<<<<<< Updated upstream
-              <p class="big_text font-hutu text-middle">「近くの理科室に行ってみようよ。動く人体模型は七不思議の定番じゃないかな。」</p>
-=======
               <p class="big_text font-hutu text-middle fadeIn">ここから近いし理科室に行ってみようよ。<br>動く人体模型は七不思議の定番じゃないかな。</p>
->>>>>>> Stashed changes
             </div>
         </div>
       </div>
@@ -77,11 +115,11 @@
             </div>
           </div>
         -->
-        <div class="row">
+        <div class="row fadeIn">
           <div class="column">
             <div class="card">
               <h3 class="card__title">ゲームを遊ぶ際の環境について</h3>
-              <p class="card__content">Google chromeでの動作確認はしておりますが他ブラウザでの確認はしていません。Google Chromeで遊ぶことをお勧めします。</p>
+              <p class="card__content">Google Chromeでの動作確認はしておりますが他ブラウザでの確認はしていません。Google Chromeで遊ぶことをお勧めします。</p>
             </div>
           </div>
           <div class="column">
@@ -101,7 +139,7 @@
     </section>
     <section class="section">
       <div class="container">
-        <a class="btn" href="main.html">脱出開始<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></a>
+        <a class="btn fadeIn" href="main.html">脱出開始<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></a>
       </div>
     </section>
   </main>

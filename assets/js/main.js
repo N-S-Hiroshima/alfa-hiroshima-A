@@ -8,9 +8,11 @@
  *          number：問題番号（数字） 1
  *          final ：最終ステージの場合 'final'
  *********************************************************************************************************/
-let finals="off";
+let finals="off",music,BGM;
  const app = Vue.createApp({
   data() {
+    bgm("loop",2);
+    bgm("bgm");
     /* 初期値を設定します */
     return {
       /* 解答
@@ -19,22 +21,22 @@ let finals="off";
       */
       correctAnswer: {
         stage1: {
-          q1: 'くすりゆび'//くすりゆび
+          q1: 'くすりゆび'
         },
         stage2: {
-          q1: 'クレヨン'//クレヨン
+          q1: 'クレヨン'
         },
         stage3: {
-          q1: 'いえ'//いえ
+          q1: 'いえ'
         },
         stage4:{
-          q1:'ふね'//ふね
+          q1:'ふね'
         },
         stage5:{
-          q1:'バイオリン'//バイオリン
+          q1:'バイオリン'
         },
         stage6:{
-          q1:'メッセージ'//メッセージ
+          q1:'メッセージ'
         },
         stage7:{
           q1:'ゆくえふめい'//
@@ -116,6 +118,24 @@ let finals="off";
     nextStage(stage) {
       this.clear[stage] = false;
       this.next[stage] = true;
+      
+    if(stage=="stage1"){
+      bgm("bgm");
+      bgm("loop",4);
+      }else if(stage=="stage2"){
+        bgm("bgm");
+      }else if(stage=="stage3"){
+        bgm("bgm");
+        bgm("loop",5);
+      }else if(stage=="stage4"){
+        bgm("start",0);
+      }else if(stage=="stage5"){
+        bgm("bgm");
+      }else if(stage=="stage6"){
+        bgm("bgm");
+      }else if(stage=="stage7"){
+        bgm("bgm");
+      }
     },
   }
 })
@@ -149,6 +169,9 @@ app.component('answer-input', {
       if(answer=== "ゆくえふめい"){//ゆくえふめいと入力した時の処理
         this.message = this.loopMessage;
         this.$emit('answerInput', true);
+        bgm("bgmstop");
+        bgm("stop");
+        bgm("start",6)
 
       }else if(answer==="りんねてんせい"){//りんねてんせいと入力した時の処理
         window.location.href = 'final.html';
@@ -156,6 +179,9 @@ app.component('answer-input', {
       }else if(answer === this.correct) { // 入力値が解答と一致する場合
         this.message = this.okMessage;
         this.$emit('answerInput', true);
+        bgm("bgmstop");
+        bgm("stop");
+        bgm("start",3)
       }else { // 一致しない場合
         this.message = this.ngMessage; 
         this.$emit('answerInput', false);
@@ -166,29 +192,81 @@ app.component('answer-input', {
 
 app.mount('#stage')
 
-window.addEventListener('DOMContentLoaded', function(){
 
-  const audioElement = document.querySelector("audio");
+function bgm(playmode,track){
+  switch(track){
+    case 0:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/0.mp3");
+      music.volume = .2      
+      break;
+    case 1:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/1.mp3");
+      music.volume = .2
+      break;
+    case 2:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/2.mp3");
+      music.volume = .9
+      break;
+    case 3:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/3.mp3");
+      music.volume = .3
+      break
+    case 4:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/4.mp3");
+      music.volume = .3
+      break;
+    case 5:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/5.mp3");
+      music.volume = .1
+      break;
+    case 6:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/6.mp3");
+      music.volume = .3
+      break;
+    case 7:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/7.mp3");
+      music.volume = .3
+      break;
+    case 8:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/8.mp3");
+      music.volume = .3
+      break;
+    case 9:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/9.mp3");
+      music.volume = .3
+      break;
+    default:
+      break;
+  }
 
-  audioElement.addEventListener('loadeddata', (e)=> {
-    audioElement.muted = true;
-    audioElement.autoplay = true;
-  });
-});
+  if(playmode=="start"){
+    music.loop = false;
+    music.play();
+  }else if(playmode=="loop"){
+    music.loop = true;
+    music.play();
+  }else if(playmode=="bgm"){
+    BGM = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/BGM.mp3");
+    BGM.volume = .3
+    BGM.loop = true;
+    BGM.play();
+  }else if(playmode=="bgmstop"){
+    while (BGM.volume>0.1) {
+      BGM.volume = BGM.volume - .00001
+    }
+    BGM.pause();
 
-function bgm(){
-  var music = new Audio();
-  music.src = 'https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/BGM.mp3';
-  music.play();
-  music.addEventListener("ended", function () {
-      music.currentTime = 0;
-      music.play();
-  }, false);
+  }else{
+    while (music.volume>0.1) {
+      music.volume = music.volume - .01
+    }
+    music.pause();
+  }  
 };
 
-//BGM停止スクリプト
-// function stbgm(){
-//   music.pause();
-//   music.currentTime = 0;
-//   console.log(paused);
-// };
+function sleep(waitMsec) {//sleep(ミリ秒)で遅延を作れる
+  var startMsec = new Date();
+ 
+  // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
+  while (new Date() - startMsec < waitMsec);
+}
