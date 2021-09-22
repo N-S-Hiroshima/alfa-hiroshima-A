@@ -136,7 +136,12 @@ let finals="off",music,BGM;
       }else if(stage=="stage6"){
         bgm("bgm");
       }else if(stage=="stage7"){
+        this.next["stage0"] = true;
+        this.next["stage1"] = true;
+        this.next["stage2"] = true;
         this.next["stage3"] = true;
+        this.next["stage4"] = true;
+        this.next["stage5"] = true;
         this.next["stage6"] = true;
         bgm("bgm");
       }
