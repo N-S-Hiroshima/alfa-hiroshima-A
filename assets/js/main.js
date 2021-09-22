@@ -117,13 +117,10 @@ let finals="off",music;
     nextStage(stage) {
       this.clear[stage] = false;
       this.next[stage] = true;
-      if(stage="stage1"){
-        bgm("stop");
-      }else if(stage=="stage4"){
-        bgm("stop");
+      if(stage=="stage4"){
         bgm("start",0);
       }else if(stage=="stage5"){
-        bgm("stop");
+
       }
     },
   }
@@ -165,6 +162,7 @@ app.component('answer-input', {
       }else if(answer === this.correct) { // 入力値が解答と一致する場合
         this.message = this.okMessage;
         this.$emit('answerInput', true);
+        bgm("stop");
       }else { // 一致しない場合
         this.message = this.ngMessage; 
         this.$emit('answerInput', false);
@@ -179,7 +177,7 @@ app.mount('#stage')
 function bgm(playmode,track){
   switch(track){
     case 0:
-      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/0.mp3");
+      music = new Audio("../../assets/audio/0.mp3");
       music.volume = .2      
       break;
     case 1:
@@ -192,8 +190,8 @@ function bgm(playmode,track){
       break;
     default:
       break;
-
   }
+
   if(playmode=="start"){
     music.loop = false;
     music.play();
