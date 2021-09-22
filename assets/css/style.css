@@ -17,6 +17,9 @@
 .swal-button{
   font-family: '游ゴシック';
 }
+.swal-footer {
+  text-align: center;
+}
 
 html {
   font-size: 18px;
