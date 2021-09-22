@@ -8,10 +8,11 @@
  *          number：問題番号（数字） 1
  *          final ：最終ステージの場合 'final'
  *********************************************************************************************************/
-let finals="off",music;
+let finals="off",music,BGM;
  const app = Vue.createApp({
   data() {
     bgm("loop",2);
+    bgm("bgm");
     /* 初期値を設定します */
     return {
       /* 解答
@@ -117,12 +118,21 @@ let finals="off",music;
     nextStage(stage) {
       this.clear[stage] = false;
       this.next[stage] = true;
+      
     if(stage=="stage1"){
+      bgm("bgm");
       bgm("loop",4);
-    }else if(stage=="stage4"){
+      }else if(stage=="stage2"){
+        bgm("bgm");
+      }else if(stage=="stage3"){
+        bgm("bgm");
+        bgm("loop",5);
+      }else if(stage=="stage4"){
         bgm("start",0);
       }else if(stage=="stage5"){
-
+        bgm("bgm");
+      }else if(stage=="stage6"){
+        bgm("bgm");
       }
     },
   }
@@ -157,6 +167,9 @@ app.component('answer-input', {
       if(answer=== "ゆくえふめい"){//ゆくえふめいと入力した時の処理
         this.message = this.loopMessage;
         this.$emit('answerInput', true);
+        bgm("bgmstop");
+        bgm("stop");
+        bgm("start",6)
 
       }else if(answer==="りんねてんせい"){//りんねてんせいと入力した時の処理
         window.location.href = 'final.html';
@@ -164,6 +177,7 @@ app.component('answer-input', {
       }else if(answer === this.correct) { // 入力値が解答と一致する場合
         this.message = this.okMessage;
         this.$emit('answerInput', true);
+        bgm("bgmstop");
         bgm("stop");
         bgm("start",3)
       }else { // 一致しない場合
@@ -201,7 +215,7 @@ function bgm(playmode,track){
       break;
     case 5:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/5.mp3");
-      music.volume = .3
+      music.volume = .1
       break;
     case 6:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/6.mp3");
@@ -229,9 +243,20 @@ function bgm(playmode,track){
   }else if(playmode=="loop"){
     music.loop = true;
     music.play();
+  }else if(playmode=="bgm"){
+    BGM = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/BGM.mp3");
+    BGM.volume = .3
+    BGM.loop = true;
+    BGM.play();
+  }else if(playmode=="bgmstop"){
+    while (BGM.volume>0.1) {
+      BGM.volume = BGM.volume - .00001
+    }
+    BGM.pause();
+
   }else{
     while (music.volume>0.1) {
-      music.volume = music.volume - .00001
+      music.volume = music.volume - .01
     }
     music.pause();
   }  
