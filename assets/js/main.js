@@ -184,8 +184,10 @@ window.addEventListener('DOMContentLoaded', function(){
 function bgm(playmode,track){
   switch(track){
     case 0:
-      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/BGM.mp3");
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/0.mp3");
       break;
+    case 1:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/1.mp3");
     default:
       break;
 
