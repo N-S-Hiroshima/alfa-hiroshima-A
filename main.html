@@ -10,6 +10,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+      $(window).on('load scroll', function (){
+    var box = $('.fadeIn');
+    var animated = 'animated';
+    box.each(function(){
+      var boxOffset = $(this).offset().top;
+      var scrollPos = $(window).scrollTop();
+      var wh = $(window).height();
+      //画面内のどの位置で処理を実行するかで「100」の値を変更
+      if(scrollPos > boxOffset - wh + 500 ){
+        $(this).addClass(animated);
+      }
+    })});
+  </script>
 </head>
 <body>
   <svg width="0" height="0" class="hidden">
@@ -20,13 +35,13 @@
   </svg>
   <header class="header">
     <div class="container">
-      <div class="header__logo"><img sarc="assets/images/teamlogo.png" alt="チームロゴ"></div>
+      <div class="header__logo"><img src="assets/images/teamlogo.png" alt="チームロゴ"></div>
       <div class="header__name header--color">N・S高生制作サイト</div>
     </div>
   </header>
   <main class="main main-page">
     <!-- タイトルエリア　ここから -->
-    <h1 class="main-title"><img src="assets/images/2Q_projectN_Top.png" alt="Presented by SCRAP×N・S高リアル脱出ゲーム制作PJ 七不思議からの脱出"></h1>
+    <h1 class="main-title"><img class="fadeIn" src="assets/images/2Q_projectN_Top.png" alt="Presented by SCRAP×N・S高リアル脱出ゲーム制作PJ 七不思議からの脱出"></h1>
     <!-- タイトルエリア　ここまで -->
     <div id="stage">
 
@@ -37,15 +52,15 @@
         <section class="section">
           <div class="container">
             <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の壱</span>理科室の人体模型</h2>
-            <p class="text-center">
+            <p class="text-center fadeIn fadeIn">
               理科室の扉を開けるとカタカタという音がする。<br>
               七不思議なんてそんなに怖くないだろうと思っていたが、実際に目の当たりにすると足がすくみ、嫌な汗が垂れてくる。
               </p>
-            <p class="text-center"></p>
+            <p class="text-center fadeIn"></p>
   
             <div class="container">
               <figure class="image__container">
-                <img src="assets/images/nazo_kusuriyubi.png" alt="">
+                <img class="fadeIn" src="assets/images/nazo_kusuriyubi.png" alt="">
               </figure>
             </div>
           </div>
@@ -101,7 +116,7 @@
           <div class="section">
             <div class="container">
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の弍</span>血涙を流す絵</h2>
-              <p class="text-center">まだあと6つ残っているというのに相当疲れた。<br>
+              <p class="text-center fadeIn">まだあと6つ残っているというのに相当疲れた。<br>
                 しかし謎を解き終えなければ脱出ができないので急ぎたい。<br>
                 次はどこに行こうか。カケルに考えを尋ねる。<br>
                 「図工室とかいいんじゃないかな。ほら、あの部屋には絵画があるだろう？何か関係がありそうだよ」<br>
@@ -112,7 +127,7 @@
                 「ほら、あれがこの部屋の謎じゃないかな」
                 </p>
                 <figure class="image__container">
-                  <img src="assets/images/nazo_crayon.png" alt="">
+                  <img class="fadeIn" src="assets/images/nazo_crayon.png" alt="">
                 </figure>
             </div>
           </div>
@@ -172,7 +187,7 @@
         <section class="section">
           <div class="container">
             <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の参</span>階段の怪異</h2>
-            <p class="text-center">「2階と3階は普通の教室しかないから次は4階の音楽室かな」<br>
+            <p class="text-center fadeIn">「2階と3階は普通の教室しかないから次は4階の音楽室かな」<br>
               カケルが当然のように次の場所を示す。それに従おうとした時だった。<br>
               「あっ、違う。花子さんがいるじゃないか。だから3階のトイレに行こう！」<br>
               カケルが慌てて訂正する。今度こそカケルに従い、階段を上り始める。<br>
@@ -182,7 +197,7 @@
               カケルが指を差す。先ほど僕も見た場所のような気がしたが、暗かったので見落としていたのだろう。<br>
               </p>
             <figure class="image__container">
-              <img src="assets/images/nazo_ie.png" alt="">
+              <img class="fadeIn" src="assets/images/nazo_ie.png" alt="">
             </figure>
           </div>
         </section>
@@ -228,7 +243,7 @@
           <div class="section">
             <div class="container">
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の四</span>トイレの花子さん</h2>
-              <p class="text-center">階段を上りきり、3階のトイレに入る。<br>
+              <p class="text-center fadeIn">階段を上りきり、3階のトイレに入る。<br>
                 奥から2番目の個室を3度ノックし、名前を呼ぶ。<br>
                 「花子さーん」<br>
                 「はーい」<br>
@@ -236,7 +251,7 @@
                 どうやらここの謎はこのテスト用紙に書いてあるらしい。
                 </p>
                 <figure class="image__container">
-                  <img src="assets/images/nazo_hune.png" alt="">
+                  <img class="fadeIn" src="assets/images/nazo_hune.png" alt="">
                 </figure>
             </div>
           </div>
@@ -281,12 +296,12 @@
           <div class="section">
             <div class="container">
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の五</span>音楽室のピアノ</h2>
-              <p class="text-center">今度こそ、先ほどカケルの示した音楽室へと向かう。<br> 階段を上りきると、早くもどこか悲しげなピアノの音が聞こえてきた。<br>
+              <p class="text-center fadeIn">今度こそ、先ほどカケルの示した音楽室へと向かう。<br> 階段を上りきると、早くもどこか悲しげなピアノの音が聞こえてきた。<br>
                 おそるおそる扉を開ける。グランドピアノの蓋は開いており、音も聞こえてくるがやはり弾き手の姿は見えない。
                 <br>またもカケルがすぐに謎のありかを見つけたらしい。</p>
                 
                 <figure class="image__container">
-                  <img src="assets/images/nazo_violin.png" alt="">
+                  <img class="fadeIn" src="assets/images/nazo_violin.png" alt="">
                 </figure>
             </div>
           </div>
@@ -322,7 +337,7 @@
           <div class="section">
             <div class="container">
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の六</span>勝手に立ち上がるPC</h2>
-              <p class="text-center">今度の謎はどこにあるのだろう。残っている一般的なものとしては体育館のボールなどだろうか。<br>そう考えているとカケルが口を開く。<br>
+              <p class="text-center fadeIn">今度の謎はどこにあるのだろう。残っている一般的なものとしては体育館のボールなどだろうか。<br>そう考えているとカケルが口を開く。<br>
                 「ひとまずこの階の部屋を順番に見ていこうか」<br>
                 カケルが言うのだからそうしよう。カケルの言うことには常に不思議な説得力があるのだ。<br>
                 「まずはPC室だね」<br>
@@ -331,7 +346,7 @@
                 そこにはまたしても謎が表示されていた。
                 </p>
                 <figure class="image__container">
-                  <img src="assets/images/nazo_message.png" alt="">
+                  <img class="fadeIn" src="assets/images/nazo_message.png" alt="">
                 </figure>
             </div>
           </div>
@@ -368,14 +383,14 @@
                 <div class="section">
                   <div class="container">
                     <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の七</span><div class="text_bokashi">学校を彷徨う男の子の霊</div></h2>
-                    <p class="text-center">目が覚めると保健室のベッドの上にいた。そうだ、あと1つ、謎を解かなければ。<br>
+                    <p class="text-center fadeIn">目が覚めると保健室のベッドの上にいた。そうだ、あと1つ、謎を解かなければ。<br>
                       起き上がると、枕元に謎が書かれた紙が置いてある。<br>
                       これを解けばいいことはわかった。しかしどうやって解けばいいのだろうか。<br>
                       カケルが声をかけてくる。<br>
                       「僕がてを貸してあげるよ。一緒にここから抜け出そう」
                       </p>
                       <figure class="image__container">
-                        <img src="assets/images/saigo.png" alt="">
+                        <img class="fadeIn" src="assets/images/saigo.png" alt="">
                       </figure>
                   </div>
                 </div>
@@ -412,9 +427,9 @@
   </main>
   <footer class="footer section bg-color--gray">
     <div class="container">
-        <p class="text-center">授業主催： N・S高<br>協力：株式会社SCRAP<br>企画制作：N・S高生</p>
-        <p class="text-center">「リアル脱出ゲーム」は株式会社SCRAPの登録商標です。</p>
-        <p class="text-center">株式会社SCRAPとN・S高で実施した授業「リアル脱出ゲームの作り方」の一環で<br>生徒が制作したものであり、SCRAPが主催/公認するものではありません。</p>
+        <p class="text-center fadeIn">授業主催： N・S高<br>協力：株式会社SCRAP<br>企画制作：N・S高生</p>
+        <p class="text-center fadeIn">「リアル脱出ゲーム」は株式会社SCRAPの登録商標です。</p>
+        <p class="text-center fadeIn">株式会社SCRAPとN・S高で実施した授業「リアル脱出ゲームの作り方」の一環で<br>生徒が制作したものであり、SCRAPが主催/公認するものではありません。</p>
     </div>
   </footer>
   <script src="https://unpkg.com/vue@next"></script>

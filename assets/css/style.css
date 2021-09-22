@@ -623,3 +623,13 @@ button {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+.fadeIn {
+  transition: 1s;
+  opacity: 0;
+}
+
+.fadeIn.animated {
+  opacity: 1;
+}
