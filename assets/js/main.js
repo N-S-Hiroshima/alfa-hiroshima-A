@@ -11,6 +11,7 @@
 let finals="off",music;
  const app = Vue.createApp({
   data() {
+    bgm("loop",2);
     /* 初期値を設定します */
     return {
       /* 解答
@@ -116,10 +117,12 @@ let finals="off",music;
     nextStage(stage) {
       this.clear[stage] = false;
       this.next[stage] = true;
-      if(stage=="stage4"){
+    if(stage=="stage1"){
+      bgm("loop",4);
+    }else if(stage=="stage4"){
         bgm("start",0);
       }else if(stage=="stage5"){
-        bgm("stop");
+
       }
     },
   }
@@ -161,6 +164,8 @@ app.component('answer-input', {
       }else if(answer === this.correct) { // 入力値が解答と一致する場合
         this.message = this.okMessage;
         this.$emit('answerInput', true);
+        bgm("stop");
+        bgm("start",3)
       }else { // 一致しない場合
         this.message = this.ngMessage; 
         this.$emit('answerInput', false);
@@ -171,29 +176,70 @@ app.component('answer-input', {
 
 app.mount('#stage')
 
-window.addEventListener('DOMContentLoaded', function(){
-
-  const audioElement = document.querySelector("audio");
-
-  audioElement.addEventListener('loadeddata', (e)=> {
-    audioElement.muted = true;
-    audioElement.autoplay = true;
-  });
-});
 
 function bgm(playmode,track){
   switch(track){
     case 0:
-      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/BGM.mp3");
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/0.mp3");
+      music.volume = .2      
+      break;
+    case 1:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/1.mp3");
+      music.volume = .2
+      break;
+    case 2:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/2.mp3");
+      music.volume = .9
+      break;
+    case 3:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/3.mp3");
+      music.volume = .3
+      break
+    case 4:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/4.mp3");
+      music.volume = .3
+      break;
+    case 5:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/5.mp3");
+      music.volume = .3
+      break;
+    case 6:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/6.mp3");
+      music.volume = .3
+      break;
+    case 7:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/7.mp3");
+      music.volume = .3
+      break;
+    case 8:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/8.mp3");
+      music.volume = .3
+      break;
+    case 9:
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/9.mp3");
+      music.volume = .3
       break;
     default:
       break;
-
   }
+
   if(playmode=="start"){
+    music.loop = false;
+    music.play();
+  }else if(playmode=="loop"){
     music.loop = true;
     music.play();
   }else{
+    while (music.volume>0.1) {
+      music.volume = music.volume - .00001
+    }
     music.pause();
   }  
 };
+
+function sleep(waitMsec) {//sleep(ミリ秒)で遅延を作れる
+  var startMsec = new Date();
+ 
+  // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
+  while (new Date() - startMsec < waitMsec);
+}

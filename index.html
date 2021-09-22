@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<ruby><rt></rt></ruby>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -9,10 +10,37 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="assets/js/main.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
 </head>
 <body>
-  <iframe src="assets/audio/BGM.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+  <script>
+     var data = sessionStorage.getItem('session');
+      if (data) {  //また会ったね と表示される
+      } else {
+    sessionStorage.setItem('session', '初回');
+    var options = {
+      icon: 'warning',
+      title:'注意',
+      text:'このサイトは音が鳴ります',
+      buttons: {
+            Ja: {
+                text:'とじる',
+                value: 3,
+              }
+        }
+      };
+      swal(options).then(function(value){
+          if(value == 3){
+            bgm("start",1);
+              //日本語
+      }
+                    
+    });
+  };
+  </script>
+
   <svg width="0" height="0" class="hidden">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.47 24.94" id="arrow" class="arrow_svg">
       <title>arrow</title>
