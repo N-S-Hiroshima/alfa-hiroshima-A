@@ -9,6 +9,20 @@
           box-sizing: border-box;
 }
 
+.swal-title{
+  font-family: '游ゴシック';
+}
+.swal-text{
+  font-family: '游ゴシック';
+}
+.swal-button{
+  font-family: '游ゴシック';
+}
+.swal-footer {
+  text-align: center;
+}
+
+
 html {
   font-size: 18px;
   -webkit-box-sizing: border-box;
@@ -38,6 +52,8 @@ img {
      object-fit: cover;
   max-width: 235px;
   max-height: 600px;
+  margin-left: 7vw;
+  margin-bottom: -38px;
 }
 
 .img-kakeru--hint {
@@ -117,6 +133,7 @@ button {
   background-color: white;
   margin: 0;
 }
+
 
 /*******************
 * Layout
@@ -304,8 +321,10 @@ button {
   background-color: #2575c7;
 }
 
+
 /*********************
 * title
+
 **********************/
 .main-title {
   margin: 0;
@@ -374,6 +393,7 @@ button {
   width: 325px;
 }
 
+
 /******************
 * text
 ******************/
@@ -391,7 +411,9 @@ button {
 }
 
 .big_text {
-  font-size: 1.3em;
+  font-size: 1.5em;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 .text-middle {
@@ -443,10 +465,16 @@ button {
 .final_text {
   color: #fff;
 }
+  text-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
+  display: inline-block;
+}
 
+.final_text {
+  color: #fff;
+  }
 .test {
   padding: 0px;
-}
+  }
 
 /*************************
 * Button
@@ -646,3 +674,41 @@ button {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+.fadeIn {
+  transition: 1s;
+  opacity: 0;
+}
+
+.fadeIn.animated {
+  opacity: 1;
+}
+
+.fadeIns {
+  transition: 4s;
+  opacity: 0;
+}
+
+.fadeIns.animated {
+  opacity: 1;
+}
+
+.fadeInn{
+  transition: all 300ms 0s ease;
+  z-index: 1;
+  position:absolute; 
+  top:0px;
+  left:0px;
+}
+
+.fadeInn.animated{
+  z-index: 1;
+  position:absolute; 
+  top:0px;
+  left:0px;
+  opacity: 0;
+}
+img.fadeInn{
+  height: 100%;
+}

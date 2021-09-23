@@ -85,6 +85,7 @@ let finals="off",music,BGM;
       *  最終ステージはページを遷移するので設定不要です。
       */
       next: {
+        stage0: true,
         stage1: false,
         stage2: false,
         stage3: false,
@@ -118,6 +119,7 @@ let finals="off",music,BGM;
     nextStage(stage) {
       this.clear[stage] = false;
       this.next[stage] = true;
+      this.next["stage"+(Number(stage.substr(-1))-1)] = false;
       
     if(stage=="stage1"){
       bgm("bgm");
@@ -132,8 +134,21 @@ let finals="off",music,BGM;
       }else if(stage=="stage5"){
         bgm("bgm");
       }else if(stage=="stage6"){
+        this.next["stage0"] = true;
+        this.next["stage1"] = true;
+        this.next["stage2"] = true;
+        this.next["stage3"] = true;
+        this.next["stage4"] = true;
+        this.next["stage5"] = true;
         bgm("bgm");
       }else if(stage=="stage7"){
+        this.next["stage0"] = true;
+        this.next["stage1"] = true;
+        this.next["stage2"] = true;
+        this.next["stage3"] = true;
+        this.next["stage4"] = true;
+        this.next["stage5"] = true;
+        this.next["stage6"] = true;
         bgm("bgm");
       }
     },
@@ -148,7 +163,7 @@ app.component('answer-input', {
       /* 送信ボタン上下に表示されるメッセージ */
       okMessage: '合っていたようだ......',
       ngMessage: 'どうやら違うらしい。もう一度考えてみよう。',
-      loopMessage: '3階のトイレにヒントがあるかもしれない。カケルの手もありがたく借りよう。',//ゆくえふめい入力時に送信ボタン上に表示させる文章
+      loopMessage: '3階のトイレに戻ってみると良いかもしれない。カケルのてもありがたく借りよう。',//ゆくえふめい入力時に送信ボタン上に表示させる文章
       message: '',
       inputAnswer: '',
     }
@@ -270,3 +285,29 @@ function sleep(waitMsec) {//sleep(ミリ秒)で遅延を作れる
   // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
   while (new Date() - startMsec < waitMsec);
 }
+
+// スクロールを禁止する関数
+function noScroll(event) {
+    event.preventDefault();
+  }
+
+ function scrollstop(){
+ // スクロール禁止(SP)
+ document.addEventListener('touchmove', noScroll, { passive: false });
+ // スクロール禁止(PC)
+ document.addEventListener('mousewheel', noScroll, { passive: false });
+ }
+
+ function scrollstart(){
+ // スクロール禁止を解除(SP)
+ document.removeEventListener('touchmove', noScroll, { passive: false });
+ // スクロール禁止を解除(PC)
+ document.removeEventListener('mousewheel', noScroll, { passive: false });
+ }
+
+ function title(){
+  var animated = 'animated';
+  $('.fadeIns').addClass(animated);
+  $('.fadeInn').addClass(animated);
+  scrollstart(); 
+ }

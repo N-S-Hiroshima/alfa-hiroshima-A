@@ -49,11 +49,12 @@
       <div id="sectionStage1" class="stage">
 
         <!-- STAGE1問題セクション　ここから -->
+        <div v-if="next['stage0']" id="sectionStage1" class="stage">
         <section class="section">
           <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の壱</span>理科室の人体模型</h2>
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の壱</span>理科室の<ruby>人体模型<rt>じんたいもけい</rt></ruby></h2>
             <p class="text-center fadeIn fadeIn">
-              理科室の扉を開けるとカタカタという音がする。<br>
+              理科室の<ruby>扉<rt>とびら</rt></ruby>を開けるとカタカタという音がする。<br>
               七不思議なんてそんなに怖くないだろうと思っていたが、実際に目の当たりにすると足がすくみ、嫌な汗が垂れてくる。
               </p>
             <p class="text-center fadeIn"></p>
@@ -67,24 +68,24 @@
         </section>
         <!-- STAGE1問題セクション　ここまで -->
 
-        <!-- STAGE1解答入力セクション　ここから -->
+        <!-- STAGE1解答<ruby>入力<rt>にゅうりょく</rt></ruby>セクション　ここから -->
         <section class="section bg-color--keycolor">
           <div class="container">
-            <h2 class="section-title"><span class="section-title__stage"></span>答えを入力</h2>
+            <h2 class="section-title"><span class="section-title__stage"></span>答えを<ruby>入力<rt>にゅうりょく</rt></ruby></h2>
             <!------------------------------------------------------------------------------------------------------------
-              解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
+              解答<ruby>入力<rt>にゅうりょく</rt></ruby>欄のコンポーネントです。<ruby>入力<rt>にゅうりょく</rt></ruby>欄・送信ボタン・エラーメッセージを表示します。
               v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
               v-on:answer-input="answerInput($event, 'stage1', 1)" は送信ボタンをクリックした時の動作を決める関数です。
               2番目、3番目の1引数 'stage1', 1 はstage1の1問目ということになります。
               1番麺の引数 $event は正解、不正解の判定を受け取る変数です。
-              []、()の間違い、''の抜けがあると動きません。
+              []、()の間違い、''の<ruby>抜<rt>ぬ</rt></ruby>けがあると動きません。
             ------------------------------------------------------------------------------------------------------------>
             <answer-input v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>
 
             <a class="link-hint" href="hint1.html" target="hint1">カケルの考えを聞く</a>
           </div>
         </section>
-        <!-- STAGE1解答入力セクション　ここまで -->
+        <!-- STAGE1解答<ruby>入力<rt>にゅうりょく</rt></ruby>セクション　ここまで -->
 
         <!-- STAGE1クリア画面　ここから -->
         <!------------------------------------------------------------------------------------------------------
@@ -96,14 +97,14 @@
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">七不思議の壱 解決</div>
-              <div class="clear-message__content">人体模型の動きが止まった。どうやら答えはあっていたらしい。</div>
+              <div class="clear-message__content"><ruby>人体模型<rt>じんたいもけい</rt></ruby>の動きが止まった。どうやら答えはあっていたらしい。</div>
               <button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次の七不思議へ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
         </section>
         <!-- STAGE1クリア画面　ここまで -->
 
-      </div>
+      </div></div>
       <!-- STAGE1　ここまで -->
 
       <!-- STAGE2　ここから -->
@@ -117,14 +118,14 @@
             <div class="container">
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の弍</span>血涙を流す絵</h2>
               <p class="text-center fadeIn">まだあと6つ残っているというのに相当疲れた。<br>
-                しかし謎を解き終えなければ脱出ができないので急ぎたい。<br>
+                しかし<ruby>謎<rt>なぞ</rt></ruby>を解き終えなければ脱出ができないので急ぎたい。<br>
                 次はどこに行こうか。カケルに考えを尋ねる。<br>
                 「図工室とかいいんじゃないかな。ほら、あの部屋には絵画があるだろう？何か関係がありそうだよ」<br>
                 やはりカケルは頼りになる。共に廊下の向こう側にある図工室へと向かう。<br>
-                扉を引くとなぜか奥の方から視線を感じる。カケルも同じく視線を感じたのか、そちらへ懐中電灯を向ける。<br>
+                <ruby>扉<rt>とびら</rt></ruby>を引くとなぜか奥の方から視線を感じる。カケルも同じく視線を感じたのか、そちらへ懐中電灯を向ける。<br>
                 モナリザの目から赤い液体が垂れている。本能的にそれが血の涙であると理解した。<br>
-                絶叫し怯える僕を尻目に、カケルはそれでも涼しい顔をしている。<br>
-                「ほら、あれがこの部屋の謎じゃないかな」
+                絶叫し怯える<ruby>僕<rt>ぼく</rt></ruby>を尻目に、カケルはそれでも涼しい顔をしている。<br>
+                「ほら、あれがこの部屋の<ruby>謎<rt>なぞ</rt></ruby>じゃないかな」
                 </p>
                 <figure class="image__container">
                   <img class="fadeIn" src="assets/images/nazo_crayon.png" alt="">
@@ -133,7 +134,7 @@
           </div>
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
-              <h2 class="section-title"><span class="section-title__stage"></span>答えを入力</h2>
+              <h2 class="section-title"><span class="section-title__stage"></span>答えを<ruby>入力<rt>にゅうりょく</rt></ruby></h2>
               
               <!-------------------------------------------------------------
                 class名"row"内のclass名"column"が横並びになります。
@@ -150,10 +151,10 @@
                 <div class="column">
                   <!-- STAGE2-1問題セクション　ここから -->
                   <!-- STAGE2-1問題セクション　ここまで -->
-                  <!-- STAGE2-1解答入力セクション　ここから -->
+                  <!-- STAGE2-1解答<ruby>入力<rt>にゅうりょく</rt></ruby>セクション　ここから -->
                   <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
                   <a class="link-hint" href="hint2.html" target="hint2">カケルの考えを聞く</a>
-                  <!-- STAGE2-1解答入力セクション　ここまで -->
+                  <!-- STAGE2-1解答<ruby>入力<rt>にゅうりょく</rt></ruby>セクション　ここまで -->
                 </div><!-- /.column -->
                 <!-- STAGE2-1　ここまで -->
               </div><!-- /.row -->
@@ -168,9 +169,9 @@
             <div class="clear-message">
               <div class="clear-message__title">七不思議の弍 解決</div>
               <div class="clear-message__content">
-                謎を解き終えた。ふと例のモナリザへ目をやると、もう血の涙は流れていない。<br>
+                <ruby>謎<rt>なぞ</rt></ruby>を解き終えた。ふと例のモナリザへ目をやると、もう血の涙は流れていない。<br>
                 彼女はいつものあの優しい微笑をたたえていた。<br>
-                やはり、どういう仕組みかはわからないが、謎を解くと怪異がおさまるようになっているらしい。
+                やはり、どういう仕組みかはわからないが、<ruby>謎<rt>なぞ</rt></ruby>を解くと怪異がおさまるようになっているらしい。
               </div>
                 <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次の七不思議へ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
@@ -188,13 +189,13 @@
           <div class="container">
             <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の参</span>階段の怪異</h2>
             <p class="text-center fadeIn">「2階と3階は普通の教室しかないから次は4階の音楽室かな」<br>
-              カケルが当然のように次の場所を示す。それに従おうとした時だった。<br>
+              カケルが当然のように次の場所を示す。それに従おうとしたのだが。<br>
               「あっ、違う。花子さんがいるじゃないか。だから3階のトイレに行こう！」<br>
-              カケルが慌てて訂正する。今度こそカケルに従い、階段を上り始める。<br>
-              2階を通り過ぎ、3階に進む途中のことだった。踊り場の階段にふと目をやると、僕の姿がそこに映っていないのだ。<br>
-              またどこかに謎があるのだろう。<br>
-              「これがここの謎かな」<br>
-              カケルが指を差す。先ほど僕も見た場所のような気がしたが、暗かったので見落としていたのだろう。<br>
+              慌てた様子で訂正したカケルに急かされるように階段を上り始める。<br>
+              2階を通り過ぎ、3階に進む踊り場でのことだった。鏡にふと目をやると、<ruby>僕<rt>ぼく</rt></ruby>の姿がそこに映っていないのである。<br>
+              またどこかに<ruby>謎<rt>なぞ</rt></ruby>があるのだろう。<br>
+              「これがここの<ruby>謎<rt>なぞ</rt></ruby>かな」<br>
+              カケルが指を差す。先ほど<ruby>僕<rt>ぼく</rt></ruby>も見た場所のような気がしたが、暗かったので見落としていたのだろう。<br>
               </p>
             <figure class="image__container">
               <img class="fadeIn" src="assets/images/nazo_ie.png" alt="">
@@ -203,12 +204,12 @@
         </section>
         <!-- STAGE3-1問題セクション　ここまで -->
 
-        <!-- STAGE3-1解答入力セクションここから -->
+        <!-- STAGE3-1解答<ruby>入力<rt>にゅうりょく</rt></ruby>セクションここから -->
         <section class="section bg-color--keycolor">
           <div class="container">
-            <h2 class="section-title"><span class="section-title__stage"></span>答えを入力</h2>
+            <h2 class="section-title"><span class="section-title__stage"></span>答えを<ruby>入力<rt>にゅうりょく</rt></ruby></h2>
             <!-----------------------------------------------------------------------------------------------------------------
-              解答入力欄のコンポーネントです。
+              解答<ruby>入力<rt>にゅうりょく</rt></ruby>欄のコンポーネントです。
               v-on:answer-input="answerInput($event, 'stage3', 1, 'final')" は送信ボタンをクリックした時の動作を決める関数です。
               4番目の引数 'final' は最終ステージを表します。
             ------------------------------------------------------------------------------------------------------------------>
@@ -216,7 +217,7 @@
             <a class="link-hint" href="hint3.html" target="hint3">カケルの考えを聞く</a>
           </div>
         </section>
-        <!-- STAGE3-1解答入力セクション　ここまで -->
+        <!-- STAGE3-1解答<ruby>入力<rt>にゅうりょく</rt></ruby>セクション　ここまで -->
 
         <!-- STAGE3クリア画面　ここから -->
         <section v-if="clear['stage3']" v-bind:class="{isClear:clear['stage3']}"  class="section section--clear bg-color--clear">
@@ -224,7 +225,7 @@
             <div class="clear-message">
               <div class="clear-message__title">七不思議の参 解決</div>
               <div class="clear-message__content">
-                鏡に僕らの姿が映った。今度こそ3階トイレの花子さんのところへ向かおう。
+                鏡に<ruby>僕<rt>ぼく</rt></ruby>らの姿が映った。今度こそ3階トイレの花子さんのところへ向かおう。
               </div>
                 <button v-on:click="nextStage('stage3')" onclick="location.href='#sectionStage4'" class="clear-message__btn btn">次の七不思議へ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
@@ -245,10 +246,10 @@
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の四</span>トイレの花子さん</h2>
               <p class="text-center fadeIn">階段を上りきり、3階のトイレに入る。<br>
                 奥から2番目の個室を3度ノックし、名前を呼ぶ。<br>
-                「花子さーん」<br>
+                「はーなこさーん」<br>
                 「はーい」<br>
-                テスト用紙を持って個室から出てきた花子さんがその用紙を渡してきた。<br>
-                どうやらここの謎はこのテスト用紙に書いてあるらしい。
+                明るい声で返事をして出てきた花子さんは、手に持った紙を渡してきた。<br>
+                どうやらここの<ruby>謎<rt>なぞ</rt></ruby>はこのテスト用紙に書いてあるらしい。
                 </p>
                 <figure class="image__container">
                   <img class="fadeIn" src="assets/images/nazo_hune.png" alt="">
@@ -257,17 +258,17 @@
           </div>
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
-              <h2 class="section-title"><span class="section-title__stage"></span>答えを入力</h2>
+              <h2 class="section-title"><span class="section-title__stage"></span>答えを<ruby>入力<rt>にゅうりょく</rt></ruby></h2>
               <div class="row">
 
                 <!-- STAGE2-1　ここから -->
                 <div class="column">
                   <!-- STAGE2-1問題セクション　ここから -->
                   <!-- STAGE2-1問題セクション　ここまで -->
-                  <!-- STAGE2-1解答入力セクション　ここから -->
+                  <!-- STAGE2-1解答<ruby>入力<rt>にゅうりょく</rt></ruby>セクション　ここから -->
                   <answer-input v-bind:correct="correctAnswer['stage4']['q1']" v-on:answer-input="answerInput($event, 'stage4', 1)"></answer-input>
                   <a class="link-hint" href="hint4.html" target="hint4">カケルの考えを聞く</a>
-                  <!-- STAGE2-1解答入力セクション　ここまで -->
+                  <!-- STAGE2-1解答<ruby>入力<rt>にゅうりょく</rt></ruby>セクション　ここまで -->
                 </div><!-- /.column -->
                 <!-- STAGE2-1　ここまで -->
               </div>
@@ -280,8 +281,8 @@
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">七不思議の四 解決</div>
-              <div class="clear-message__content">謎を解き終えると花子さんは満足そうに個室へと戻っていった。<br>
-                扉が閉まりきった途端、気配がなくなったような気がした。
+              <div class="clear-message__content"><ruby>謎<rt>なぞ</rt></ruby>を解き終えると花子さんは満足そうに個室へと戻っていった。<br>
+                <ruby>扉<rt>とびら</rt></ruby>が閉まりきった途端、気配がなくなったような気がした。
                 </div>
                 <button v-on:click="nextStage('stage4')" onclick="location.href='#sectionStage5'" class="clear-message__btn btn">次の七不思議へ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
@@ -297,8 +298,8 @@
             <div class="container">
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の五</span>音楽室のピアノ</h2>
               <p class="text-center fadeIn">今度こそ、先ほどカケルの示した音楽室へと向かう。<br> 階段を上りきると、早くもどこか悲しげなピアノの音が聞こえてきた。<br>
-                おそるおそる扉を開ける。グランドピアノの蓋は開いており、音も聞こえてくるがやはり弾き手の姿は見えない。
-                <br>またもカケルがすぐに謎のありかを見つけたらしい。</p>
+                おそるおそる<ruby>扉<rt>とびら</rt></ruby>を開ける。グランドピアノの蓋は開いており、音も聞こえてくるがやはり弾き手の姿は見えない。
+                <br>またもカケルがすぐに<ruby>謎<rt>なぞ</rt></ruby>のありかを見つけたらしい。</p>
                 
                 <figure class="image__container">
                   <img class="fadeIn" src="assets/images/nazo_violin.png" alt="">
@@ -307,7 +308,7 @@
           </div>
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
-              <h2 class="section-title"><span class="section-title__stage"></span>答えを入力</h2>
+              <h2 class="section-title"><span class="section-title__stage"></span>答えを<ruby>入力<rt>にゅうりょく</rt></ruby></h2>
               <div class="row">
                 <div class="column">
                   <answer-input v-bind:correct="correctAnswer['stage5']['q1']" v-on:answer-input="answerInput($event, 'stage5', 1)"></answer-input>
@@ -323,7 +324,7 @@
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">七不思議の五 解決</div>
-              <div class="clear-message__content">謎を解き終えるとピアノの音が止み、グランドピアノの蓋はいつの間にか閉じていた。</div>
+              <div class="clear-message__content"><ruby>謎<rt>なぞ</rt></ruby>を解き終えるとピアノの音が止み、グランドピアノの蓋はいつの間にか閉じていた。</div>
                 <button v-on:click="nextStage('stage5')" onclick="location.href='#sectionStage6'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
@@ -337,13 +338,13 @@
           <div class="section">
             <div class="container">
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の六</span>勝手に立ち上がるPC</h2>
-              <p class="text-center fadeIn">今度の謎はどこにあるのだろう。残っている一般的なものとしては体育館のボールなどだろうか。<br>そう考えているとカケルが口を開く。<br>
+              <p class="text-center fadeIn">今度の<ruby>謎<rt>なぞ</rt></ruby>はどこにあるのだろう。残っている一般的なものとしては体育館のボールなどだろうか。<br>そう考えているとカケルが口を開く。<br>
                 「ひとまずこの階の部屋を順番に見ていこうか」<br>
                 カケルが言うのだからそうしよう。カケルの言うことには常に不思議な説得力があるのだ。<br>
                 「まずはPC室だね」<br>
-                少しばかり廊下を進み、PC室の扉を開ける。<br>
+                少しばかり廊下を進み、PC室の<ruby>扉<rt>とびら</rt></ruby>を開ける。<br>
                 途端、一台のPCの電源が立ち上がる。<br>
-                そこにはまたしても謎が表示されていた。
+                そこにはまたしても<ruby>謎<rt>なぞ</rt></ruby>が表示されていた。
                 </p>
                 <figure class="image__container">
                   <img class="fadeIn" src="assets/images/nazo_message.png" alt="">
@@ -352,7 +353,7 @@
           </div>
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
-              <h2 class="section-title"><span class="section-title__stage"></span>答えを入力</h2>
+              <h2 class="section-title"><span class="section-title__stage"></span>答えを<ruby>入力<rt>にゅうりょく</rt></ruby></h2>
               <div class="row">
                 <div class="column">
                   <answer-input v-bind:correct="correctAnswer['stage6']['q1']" v-on:answer-input="answerInput($event, 'stage6', 1)"></answer-input>
@@ -368,7 +369,7 @@
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">七不思議の六 解決</div>
-              <div class="clear-message__content">謎を解き終えた。七不思議で残るのは後ひとつ。早く解き終えて家でゆっくり休もう。そう思った途端、視界がぼやける。
+              <div class="clear-message__content"><ruby>謎<rt>なぞ</rt></ruby>を解き終えた。七不思議で残るのは後ひとつ。早く解き終えて家でゆっくり休もう。そう思った途端、視界がぼやける。
               </div>
                 <button v-on:click="nextStage('stage6')" onclick="location.href='#sectionStage7'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
@@ -383,11 +384,11 @@
                 <div class="section">
                   <div class="container">
                     <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">七不思議の七</span><div class="text_bokashi">学校を彷徨う男の子の霊</div></h2>
-                    <p class="text-center fadeIn">目が覚めると保健室のベッドの上にいた。そうだ、あと1つ、謎を解かなければ。<br>
-                      起き上がると、枕元に謎が書かれた紙が置いてある。<br>
+                    <p class="text-center fadeIn">目が覚めると保健室のベッドの上にいた。そうだ、あと1つ、<ruby>謎<rt>なぞ</rt></ruby>を解かなければ。<br>
+                      起き上がると、枕元に<ruby>謎<rt>なぞ</rt></ruby>が書かれた紙が置いてある。<br>
                       これを解けばいいことはわかった。しかしどうやって解けばいいのだろうか。<br>
                       カケルが声をかけてくる。<br>
-                      「僕がてを貸してあげるよ。一緒にここから抜け出そう」
+                      「<ruby>僕<rt>ぼく</rt></ruby>がてを貸してあげるよ。一緒にここから<ruby>抜<rt>ぬ</rt></ruby>け出そう」
                       </p>
                       <figure class="image__container">
                         <img class="fadeIn" src="assets/images/saigo.png" alt="">
@@ -396,7 +397,7 @@
                 </div>
                 <div class="stage-column__container section bg-color--keycolor">
                   <div class="container">   
-                    <h2 class="section-title"><span class="section-title__stage"></span>答えを入力</h2>
+                    <h2 class="section-title"><span class="section-title__stage"></span>答えを<ruby>入力<rt>にゅうりょく</rt></ruby></h2>
                     <div class="row">
                       <div class="column">
                         <answer-input v-bind:correct="correctAnswer['stage7']['q1']" v-on:answer-input="answerInput($event, 'stage7', 1 ,'final')"></answer-input>
@@ -411,13 +412,13 @@
                 <div class="container">
                   <div class="clear-message">
                     <div class="clear-message__title">七不思議の七</div>
-                    <div class="clear-message__content">「あーあ、七不思議に取り込まれちゃった…<br>
-                      　真実の赤と偽りの黒、これに気づくことができるかな」<br>
-                      カケルの言葉を聞こえたのを最後に僕の意識はなくなってしまった<br>
+                    <div class="clear-message__content">
+                      「取り込まれちゃったね……『真実の赤』がキーワードだよ」<br>
+                      カケルの言葉が聞こえたのを最後に<ruby>僕<rt>ぼく</rt></ruby>の意識はなくなってしまった<br>
                       そして目が覚めると保健室のベッドの上にいた<br>
                       カケルが声をかけてくる<br>
-                      「これで最後だよ、僕がてを貸してあげるよ。」</div>
-                      <button v-on:click="nextStage('stage7')" onclick="location.href='#sectionStage_normal'" class="clear-message__btn btn">もう一度謎に挑む<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+                      「ダメだったね……<ruby>僕<rt>ぼく</rt></ruby>がてを貸してあげる。今度こそ一緒にここから<ruby>抜<rt>ぬ</rt></ruby>け出そう」</div>
+                      <button v-on:click="nextStage('stage7')" onclick="location.href='#sectionStage_normal'" class="clear-message__btn btn">もう一度<ruby>謎<rt>なぞ</rt></ruby>に挑む<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
                   </div>
                 </div>
               </section>
