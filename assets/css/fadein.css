@@ -7,14 +7,7 @@
   .fadeInn li:nth-child(even) {
     -webkit-animation: horizontal2 1s ease-in-out infinite alternate;
   }
-img.pronlogo{
-    position:absolute;
-    top: 0px;
-    left: 89%;
-    width: 11%;
-    height: auto;
-
-}
+   
   .fadeInn span {
     display: block;
     text-align: center;
@@ -23,7 +16,6 @@ img.pronlogo{
   span img{
     width: 330px;
     height: auto;
-    
   }
   li:nth-child(1) span {
       position:absolute;
@@ -146,17 +138,4 @@ img.pronlogo{
     20% {
         margin-top: 0;
     }
-}
-
-.subtitle{
-    position: absolute;
-    top: 92%;
-    left: 65%;
-    font-size: 40px;
-	text-align:center;
-	line-height:0.95em;
-	font-weight:bold;
-	color: transparent;
-	background: linear-gradient( 90deg, #0091EA 0% 30%, #00B0FF 40% 60%, #80D8FF 70% 100% );
-	-webkit-background-clip: text;
 }
