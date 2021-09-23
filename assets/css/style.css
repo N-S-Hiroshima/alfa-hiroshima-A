@@ -8,15 +8,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.swal-title{
-  font-family: '游ゴシック';
-}
-.swal-text{
-  font-family: '游ゴシック';
-}
-.swal-button{
-  font-family: '游ゴシック';
-}
 
 html {
   font-size: 18px;
@@ -414,16 +405,48 @@ button {
 
 .text_bokashi {
   color: transparent;
-  text-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 9px white;
   display: inline-block;
+}
+
+.text_bokashi--final1 {
+  color: transparent;
+  text-shadow: 0 0 1.3px white;
+  display: inline-block;
+}
+
+.text_bokashi--final2 {
+  color: transparent;
+  text-shadow: 0 0 1.8px white;
+}
+
+.text_bokashi--final3 {
+  color: transparent;
+  text-shadow: 0 0 2.1px white;
+}
+
+.text_bokashi--final4 {
+  color: transparent;
+  text-shadow: 0 0 2.5px white;
+}
+
+.text_bokashi--final5 {
+  color: transparent;
+  text-shadow: 0 0 2.7px white;
+}
+
+.text_bokashi--final6 {
+  color: transparent;
+  text-shadow: 0 0 3px #fff;
 }
 
 .final_text {
   color: #fff;
-  }
+}
+
 .test {
   padding: 0px;
-  }
+}
 
 /*************************
 * Button
@@ -623,13 +646,3 @@ button {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
-
-
-.fadeIn {
-  transition: 1s;
-  opacity: 0;
-}
-
-.fadeIn.animated {
-  opacity: 1;
-}

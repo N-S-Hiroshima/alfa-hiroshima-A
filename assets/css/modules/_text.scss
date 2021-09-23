@@ -83,8 +83,33 @@
 
 .text_bokashi{
   color: transparent;
-  text-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 9px rgb(255, 255, 255);
   display: inline-block;
+  &--final1{
+    color: transparent;
+    text-shadow: 0 0 1.3px rgb(255, 255, 255);
+    display: inline-block;
+  }
+  &--final2{
+    color: transparent;
+    text-shadow: 0 0 1.8px rgb(255, 255, 255);
+  }
+  &--final3{
+    color: transparent;
+    text-shadow: 0 0 2.1px rgb(255, 255, 255);
+  }
+  &--final4{
+    color: transparent;
+    text-shadow: 0 0 2.5px rgb(255, 255, 255);
+  }
+  &--final5{
+    color: transparent;
+    text-shadow: 0 0 2.7px rgb(255, 255, 255);
+  }
+  &--final6{
+    color: transparent;
+    text-shadow: 0 0 3px #fff;
+  }
 }
 
 .final_text{
@@ -94,4 +119,5 @@
 .test{
   padding: 0px;
 }
+
 
