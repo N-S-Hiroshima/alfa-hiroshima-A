@@ -211,7 +211,7 @@ app.mount('#stage')
 function bgm(playmode,track){
   switch(track){
     case 0:
-      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/0.mp3");
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/maou_piano.mp3");
       music.volume = .2      
       break;
     case 1:
@@ -223,7 +223,7 @@ function bgm(playmode,track){
       music.volume = .9
       break;
     case 3:
-      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/3.mp3");
+      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/silence.mp3");
       music.volume = .3
       break
     case 4:
@@ -233,22 +233,6 @@ function bgm(playmode,track){
     case 5:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/5.mp3");
       music.volume = .1
-      break;
-    case 6:
-      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/6.mp3");
-      music.volume = .3
-      break;
-    case 7:
-      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/7.mp3");
-      music.volume = .3
-      break;
-    case 8:
-      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/8.mp3");
-      music.volume = .3
-      break;
-    case 9:
-      music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/9.mp3");
-      music.volume = .3
       break;
     default:
       break;
