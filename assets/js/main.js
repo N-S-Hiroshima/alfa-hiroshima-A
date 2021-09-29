@@ -130,7 +130,7 @@ let finals="off",music,BGM;
         bgm("bgm");
         bgm("loop",5);
       }else if(stage=="stage4"){
-        bgm("start",0);
+        bgm("loop",0);
       }else if(stage=="stage5"){
         bgm("bgm");
       }else if(stage=="stage6"){
@@ -212,7 +212,7 @@ function bgm(playmode,track){
   switch(track){
     case 0:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/maou_piano.mp3");
-      music.volume = .2      
+      music.volume = .2
       break;
     case 1:
       music = new Audio("https://n-s-hiroshima.github.io/beta-hiroshima-A/assets/audio/1.mp3");
@@ -254,7 +254,6 @@ function bgm(playmode,track){
       BGM.volume = BGM.volume - .00001
     }
     BGM.pause();
-
   }else{
     while (music.volume>0.1) {
       music.volume = music.volume - .01
